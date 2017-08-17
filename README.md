@@ -1,2 +1,2 @@
-# personal-website
-visit the website from here: https://diandians.github.io/index/
+# my personal-website
+visit the website from here: [Qiufeng Zhu](https://diandians.github.io/)
