@@ -16,6 +16,7 @@ body {
 }
 
 .navbar-brand h1 {	/* your name */
+	font-family: 'Kaushan Script', cursive;
 	color: #87185e;
 	font-size: 1.3em;
 	text-transform: uppercase;
@@ -77,7 +78,10 @@ body {
       transform: translateY(0);
    }
 } 
-
+.introduction p:nth-child(1) {
+	font-family: 'Zilla Slab Highlight', cursive;
+	font-size: 1.2em;
+}
 .introduction p {
 	margin: 15px auto 20px;
 	line-weight:.75;
