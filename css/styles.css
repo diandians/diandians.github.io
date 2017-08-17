@@ -45,6 +45,7 @@ body {
 }
 #nav-list a span {
   font-size: 1.3em;
+  margin-right: 5px;
 }
 .navbar-header button.navbar-toggle, .navbar-header .icon-bar {
   border: 1px solid #61122f;
@@ -64,7 +65,7 @@ body {
 }
 /* add animation: fade in down; */
 .container .jumbotron {
-  animation: fade-in-down 0.8s;
+  animation: fade-in-down 0.5s;
   animation-delay: 0.3s;
   animation-fill-mode: both;
 }
@@ -85,6 +86,13 @@ body {
 .introduction p {
 	margin: 15px auto 20px;
 	line-weight:.75;
+	text-align: justify;
+}
+/* animation */
+.introduction p {
+	animation: fade-in-down 0.5s;
+  animation-delay: 0.3s;
+  animation-fill-mode: both;
 }
 
 /* SOCIAL MEDIA */
@@ -92,22 +100,22 @@ body {
 .social-icons {
 	position: absolute;
 	bottom: 0;
+	margin-left: 15px;
 }
 .social-icons li {
 	list-style: none;
-	display: inline-block;
 	padding-right: 1px;
 	padding-left: 1px;
-	margin-bottom: 10px;
+	margin-bottom: 7px;
 }
 .social-icons .fa {
-	font-size: 1.8em;
+	font-size: 1.5em;
 }
 /*Change icons circle size and color here*/
 .social-icons .fa {
-	width: 50px;
-	height: 50px;
-	line-height: 50px;
+	width: 35px;
+	height: 35px;
+	line-height: 30px;
 	text-align: center;
 	color: #FFF;
 	color: rgba(255, 255, 255, 0.8);
@@ -124,9 +132,9 @@ body {
 
 .social-icons .fa:hover, .social-icons .fa:active {
 	color: #FFF;
-	-webkit-box-shadow: 1px 1px 3px #333;
-	-moz-box-shadow: 1px 1px 3px #333;
-	box-shadow: 1px 1px 3px #333; 
+	-webkit-box-shadow: 1px 2px 4px #333;
+	-moz-box-shadow: 1px 2px 4px #333;
+	box-shadow: 1px 2px 4px #333; 
 }
 /* END SOCIAL MEDIA */
 
@@ -177,6 +185,7 @@ body {
 	/* HOME PAGE */
 	.container #profile-container {
 		width: 35%;
+		height: 380px;
 	}
 	.container #introduction-container {
 		width: 55%;
@@ -202,6 +211,7 @@ body {
 	    width: 200px;
 	}
   	.container #profile-container {
+  		height: 310px;
 		width: 35%;
 	}
 	.container #introduction-container {
@@ -220,6 +230,7 @@ body {
 	}
 	.container #profile-container {
 		width: 35%;
+		height: 220px;
 	}
 	.container #introduction-container {
 		width: 55%;
