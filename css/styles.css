@@ -2,7 +2,6 @@ body {
 	font-size: 16px;
 	color:#fff;
 	background-color: #61122f;
-	font-family: 'Oxygen', sans-serif
 }
 /* HEADER */
 #header-nav {
@@ -151,11 +150,16 @@ body {
 /* END FOOTER */
 
 /* PROJECT */
-#project {
-	padding-right: 10px;
-	padding-left: 10px;
+.row {
+	border: 1px solid #fff;
+	border-radius: 2%;
+
 }
-#project h3 {
+.project {
+	padding-left: 5%;
+	padding-right: 5%;
+}
+.project h3 {
 	text-shadow: 1px 1px 1px #222;
 	padding: auto 2px 2px 2px;
 	font-weight: bold;
@@ -164,12 +168,12 @@ body {
 	box-shadow: 0 0 50px #3F0C1F; 
 	border: 1.5px solid #3F0C1F;
 }
-#project a {
+.project a {
 	font-style: italic;
 	font-size: 1.2em;
 	color: #c9bdc5;
 }
-#project a:hover, #project a:focus {
+.project a:hover, #project a:focus {
 	text-decoration: none;
 	background-color: #E7E7E7;
 	color: #61122f;
@@ -195,11 +199,13 @@ body {
 	    height: 360px;
   		width: 250px;
 	}
-	#project {
-		margin:10px auto 10px;
-		width: 70%;
-	}
 	/* END HOME PAGE */
+	/* PROJECT */
+	.project {
+		margin:10px auto 10px;
+		width: 50%;
+	}
+	/* PROJECT */
 }
 
 /********** Medium devices only **********/
@@ -218,6 +224,12 @@ body {
 		width: 55%;
 	}
 	/* HOME PAGE */
+	/* PROJECT */
+	.project {
+		margin:10px auto 10px;
+		width: 70%;
+	}
+	/* PROJECT */
 }
 
 /********** Small devices only **********/
@@ -236,6 +248,12 @@ body {
 		width: 55%;
 	}
 	/* HOME PAGE */
+	/* PROJECT */
+	.project {
+		margin:10px auto 10px;
+		width: 90%;
+	}
+	/* PROJECT */
 }
 
 /********** Extra small devices only **********/
@@ -273,4 +291,11 @@ body {
 		margin-left: 5%;
 	}
 	/* HOME PAGE */
+
+	/* PROJECT */
+	.project {
+		margin:10px auto 10px;
+		width: 90%;
+	}
+	/* END PROJECT */
 }
