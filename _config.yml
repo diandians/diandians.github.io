@@ -1,1 +1,15 @@
-theme: jekyll-theme-tactile
+# Site Settings
+title: Qiufeng Zhu
+email: qiufengzhu11@gmail.com
+description: >
+  A personal blog
+baseurl: ""
+url: "http://diandians.github.io"
+twitter_username: taniarascia
+github_username:  taniarascia
+# Build Settings
+sass:
+  sass_dir: _sass
+include: ['_pages']
+kramdown:
+  input: GFM
