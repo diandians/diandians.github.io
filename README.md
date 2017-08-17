@@ -1,3 +1,2 @@
-# diandians.github.io
-
-This is a persianl website of [Qiufeng Zhu](http://www.qiufengzhu.com/)
+# personal-website
+visit the website from here: https://diandians.github.io/personal-website/
