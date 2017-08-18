@@ -1,0 +1,297 @@
+body {
+	font-size: 16px;
+	color:#fff;
+	background-color: #61122f;
+}
+/* HEADER */
+#header-nav {
+	background-color: #c9bdc5;
+	border-radius: 0;
+	border: 0;
+}
+
+.navbar-brand {
+	padding-top: 25px;
+}
+
+.navbar-brand h1 {	/* your name */
+	font-family: 'Kaushan Script', cursive;
+	color: #87185e;
+	font-size: 1.3em;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-shadow: 1px 2px 2px #222;
+	margin-top: 0;
+	margin-bottom: 0;
+	line-weight:.75;
+}
+
+.navbar-brand a:hover, .navbar-brand a:focus {
+	text-decoration: none;
+}
+
+#nav-list {
+	margin-top: 10px;
+}
+
+#nav-list a {
+	color: #951C49;
+  	text-align: center;
+}
+
+#nav-list a:hover, #navelist a:focus {
+  background: #E7E7E7;
+}
+#nav-list a span {
+  font-size: 1.3em;
+  margin-right: 5px;
+}
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+  border: 1px solid #61122f;
+}
+.navbar-header button.navbar-toggle {
+  clear: both;
+  margin-top: -30px;
+}
+/* END HEADER */
+
+/* HOME PAGE */
+
+.container .jumbotron {
+  box-shadow: 0 0 50px #3F0C1F;
+  border: 2px solid #3F0C1F;
+  margin: 15px auto 70px;
+}
+/* add animation: fade in down; */
+.container .jumbotron {
+  animation: fade-in-down 0.5s;
+  animation-delay: 0.3s;
+  animation-fill-mode: both;
+}
+@keyframes fade-in-down {
+   0% {
+      opacity: 0;
+      transform: translateY(-20px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+} 
+.introduction p:nth-child(1) {
+	font-family: 'Zilla Slab Highlight', cursive;
+	font-size: 1.2em;
+}
+.introduction p {
+	margin: 15px auto 20px;
+	line-weight:.75;
+	text-align: justify;
+}
+/* animation */
+.introduction p {
+	animation: fade-in-down 0.5s;
+  animation-delay: 0.3s;
+  animation-fill-mode: both;
+}
+
+/* SOCIAL MEDIA */
+/*Change icons size here*/
+.social-icons {
+	position: absolute;
+	bottom: 0;
+	margin-left: 15px;
+}
+.social-icons li {
+	list-style: none;
+	padding-right: 1px;
+	padding-left: 1px;
+	margin-bottom: 7px;
+}
+.social-icons .fa {
+	font-size: 1.5em;
+}
+/*Change icons circle size and color here*/
+.social-icons .fa {
+	width: 35px;
+	height: 35px;
+	line-height: 30px;
+	text-align: center;
+	color: #FFF;
+	color: rgba(255, 255, 255, 0.8);
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.social-icons.icon-circle .fa{ 
+	border-radius: 50%;
+}
+
+.social-icons .fa:hover, .social-icons .fa:active {
+	color: #FFF;
+	-webkit-box-shadow: 1px 2px 4px #333;
+	-moz-box-shadow: 1px 2px 4px #333;
+	box-shadow: 1px 2px 4px #333; 
+}
+/* END SOCIAL MEDIA */
+
+/* END HOME PAGE */
+
+/* FOOTER */
+.panel-footer {
+  margin-top: 30px;
+  padding-top: 35px;
+  padding-bottom: 30px;
+  background-color: #222;
+  border-top: 0;
+}
+/* END FOOTER */
+
+/* PROJECT */
+
+.project {
+	padding-left: 5%;
+	padding-right: 5%;
+}
+.project h3 {
+	text-shadow: 1px 1px 1px #222;
+	padding: auto 2px 2px 2px;
+	font-weight: bold;
+}
+.caption img {
+	box-shadow: 0 0 50px #3F0C1F; 
+	border: 1.5px solid #3F0C1F;
+}
+.project a {
+	font-style: italic;
+	font-size: 1.2em;
+	color: #c9bdc5;
+}
+.project a:hover, #project a:focus {
+	text-decoration: none;
+	background-color: #E7E7E7;
+	color: #61122f;
+}
+#project-title {
+	text-align: center; 
+	margin-bottom: 30px;
+}
+/* END PROJECT */
+
+/********** Large devices only **********/
+@media (min-width: 1200px) {
+	/* HOME PAGE */
+	.container #profile-container {
+		width: 35%;
+		height: 380px;
+	}
+	.container #introduction-container {
+		width: 55%;
+	}
+	.container .jumbotron {
+	    background: url('../images/profile2_1200.jpg') no-repeat;
+	    height: 360px;
+  		width: 250px;
+	}
+	/* END HOME PAGE */
+	/* PROJECT */
+	.project {
+		margin:10px auto 10px;
+		width: 50%;
+	}
+	/* PROJECT */
+}
+
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+  	/* HOME PAGE */
+  	.container .jumbotron {
+	    background: url('../images/profile2_992.jpg') no-repeat;
+	    height: 290px;
+	    width: 200px;
+	}
+  	.container #profile-container {
+  		height: 310px;
+		width: 35%;
+	}
+	.container #introduction-container {
+		width: 55%;
+	}
+	/* HOME PAGE */
+	/* PROJECT */
+	.project {
+		margin:10px auto 10px;
+		width: 70%;
+	}
+	/* PROJECT */
+}
+
+/********** Small devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+	/* HOME PAGE */
+	.container .jumbotron {
+	    background: url('../images/profile2_768.jpg') no-repeat;
+	    height: 200px;
+	    width: 130px;
+	}
+	.container #profile-container {
+		width: 35%;
+		height: 220px;
+	}
+	.container #introduction-container {
+		width: 55%;
+	}
+	/* HOME PAGE */
+	/* PROJECT */
+	.project {
+		margin:10px auto 10px;
+		width: 90%;
+	}
+	/* PROJECT */
+}
+
+/********** Extra small devices only **********/
+@media (max-width: 767px) {
+  	/* Header */
+  	.navbar-brand {
+    padding-top: 10px;
+    height: 80px;
+  	}
+  	.navbar-brand h1 { /* Restaurant name */
+    	padding-top: 10px;
+    	font-size: 5vw; /* 1vw = 1% of viewport width */
+  	}
+
+  	#collapsable-nav a { /* Collapsed nav menu text */
+    	font-size: 1.2em;
+  	}
+  	#collapsable-nav a span { /* Collapsed nav menu glyph */
+    	font-size: 1em;
+    	margin-right: 5px;
+  	}
+  	/* End Header */
+
+  	/* HOME PAGE */
+  	.container .jumbotron {
+	    margin-top: 20px;
+	    padding: 0;
+	    width: 150px;
+	}
+	.container #profile-container {
+		width: 90%;		
+	}
+	.container #introduction-container {
+		width: 90%;
+		margin-left: 5%;
+	}
+	/* HOME PAGE */
+
+	/* PROJECT */
+	.project {
+		margin:10px auto 10px;
+		width: 90%;
+	}
+	/* END PROJECT */
+}
