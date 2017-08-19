@@ -9,10 +9,10 @@ title: Blog
 <section>
 	<div class="container">
 	    <div class="row">
-	        <ul style="list-style-position: inside">
+	        <ul style="list-style-position: inside;">
 	           {% for post in site.posts %}
 	             <li>
-	               <a href="{{ post.url }}">{{ post.title }}</a>
+	               <a style="color: #fff;" href="{{ post.url }}">{{ post.title }}</a>
 	               - {{ post.date | date: "%d %B %Y" }}
 	             </li>
 	           {% endfor %}

@@ -156,8 +156,7 @@ body {
 /* PROJECT */
 
 .project {
-	padding-left: 5%;
-	padding-right: 5%;
+	margin: 5px auto 5px;
 }
 .project h3 {
 	text-shadow: 1px 1px 1px #222;
@@ -197,11 +196,6 @@ body {
   		width: 250px;
 	}
 	/* END HOME PAGE */
-	/* PROJECT */
-	.project {
-		margin:10px auto 10px;
-	}
-	/* PROJECT */
 }
 
 /********** Medium devices only **********/
@@ -220,11 +214,6 @@ body {
 		width: 60%;
 	}
 	/* HOME PAGE */
-	/* PROJECT */
-	.project {
-		margin:10px auto 10px;
-	}
-	/* PROJECT */
 }
 
 /********** Small devices only **********/
@@ -243,11 +232,6 @@ body {
 		width: 60%;
 	}
 	/* HOME PAGE */
-	/* PROJECT */
-	.project {
-		margin:10px auto 10px;
-	}
-	/* PROJECT */
 }
 
 /********** Extra small devices only **********/
@@ -279,9 +263,4 @@ body {
 	}
 	/* HOME PAGE */
 
-	/* PROJECT */
-	.project {
-		margin:10px auto 10px;
-	}
-	/* END PROJECT */
 }
