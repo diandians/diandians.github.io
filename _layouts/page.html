@@ -5,11 +5,17 @@ layout: default
 ---
 
 {% if page.title != 'Home' %}
-<section class="bg-dark">
-	<div class="text-center"> 
-		<h1> {{ page.title }} </h1>
-	</div>
-</section>
+
+	<section class="bg-dark">
+		<div class="text-center"> 
+			<h1> {{ page.title }} </h1>
+		</div>
+	</section>
+
 {% endif %}
 
+
+<div id="main-content" class="container">
 {{ content }}
+</div>
+

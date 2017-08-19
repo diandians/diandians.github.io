@@ -54,6 +54,11 @@ body {
   margin-top: -30px;
 }
 /* END HEADER */
+/* MAIN CONTAINER */
+#main-content {
+	width: 75%;
+	margin: 15px auto 15px;
+}
 
 /* HOME PAGE */
 
@@ -99,7 +104,6 @@ body {
 .social-icons {
 	position: absolute;
 	bottom: 0;
-	margin-left: 15px;
 }
 .social-icons li {
 	list-style: none;
@@ -181,11 +185,11 @@ body {
 @media (min-width: 1200px) {
 	/* HOME PAGE */
 	.container #profile-container {
-		width: 35%;
+		width: 40%;
 		height: 380px;
 	}
 	.container #introduction-container {
-		width: 55%;
+		width: 60%;
 	}
 	.container .jumbotron {
 	    background: url('../images/profile2_1200.jpg') no-repeat;
@@ -196,7 +200,6 @@ body {
 	/* PROJECT */
 	.project {
 		margin:10px auto 10px;
-		width: 50%;
 	}
 	/* PROJECT */
 }
@@ -211,16 +214,15 @@ body {
 	}
   	.container #profile-container {
   		height: 310px;
-		width: 35%;
+		width: 40%;
 	}
 	.container #introduction-container {
-		width: 55%;
+		width: 60%;
 	}
 	/* HOME PAGE */
 	/* PROJECT */
 	.project {
 		margin:10px auto 10px;
-		width: 70%;
 	}
 	/* PROJECT */
 }
@@ -234,17 +236,16 @@ body {
 	    width: 130px;
 	}
 	.container #profile-container {
-		width: 35%;
+		width: 40%;
 		height: 220px;
 	}
 	.container #introduction-container {
-		width: 55%;
+		width: 60%;
 	}
 	/* HOME PAGE */
 	/* PROJECT */
 	.project {
 		margin:10px auto 10px;
-		width: 90%;
 	}
 	/* PROJECT */
 }
@@ -276,19 +277,11 @@ body {
 	    padding: 0;
 	    width: 150px;
 	}
-	.container #profile-container {
-		width: 90%;		
-	}
-	.container #introduction-container {
-		width: 90%;
-		margin-left: 5%;
-	}
 	/* HOME PAGE */
 
 	/* PROJECT */
 	.project {
 		margin:10px auto 10px;
-		width: 90%;
 	}
 	/* END PROJECT */
 }
