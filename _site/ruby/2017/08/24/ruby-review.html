@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Qiufeng Zhu | Ruby Review - 1</title>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script| Zilla+Slab+Highlight" rel="stylesheet">
+    <!-- Add icon library -->
+    <link rel='stylesheet prefetch' href='https:////netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css'>
+    <link rel="stylesheet" type="text/html" href="header.html">
+  </head>
+  
+<body>
+  <header>
+    <nav id="header-nav" class="navbar navbar-default">
+      <div class= "container">
+        <div class="navbar-header">
+          <div class="navbar-brand" class="pull-left">
+            <a href="index.html"><h1> Sofia Zhu </h1></a>
+          </div>
+
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+        </div>
+          <div id="collapsable-nav" class="collapse navbar-collapse">
+            <ul id="nav-list" class="nav navbar-nav navbar-right">
+              <li>
+                <a href="/index.html">
+                  <span class="glyphicon glyphicon-home"><br class="hidden-xs"></span>Home
+                </a>
+              </li>
+              <li>
+                <a href="/project.html">
+                  <span class="glyphicon glyphicon-tasks"><br class="hidden-xs"></span>Project 
+                </a>
+              </li>
+              <li>
+                <a href="/blog.html">
+                  <span class="glyphicon glyphicon-book"><br class="hidden-xs"></span>Blog
+                </a>
+              </li>
+            </ul>
+          </div> <!-- End of collapsable navbar -->
+      </div>
+
+    </nav> <!-- End of navbar -->
+  </header> 
+
+
+	<section class="bg-dark">
+		<div class="text-center"> 
+			<h1> Ruby Review - 1 </h1>
+		</div>
+	</section>
+
+
+
+
+<div id="main-content" class="container">
+	<p>Web stuffs are not diffcult to learn, but they are easy to forget if we do not use them for a long time. To get them back, I would like to write a post to review them. I am going to list some basics and important stuffs in the post. Today’s topic is ruby. This topic will last for a few days, so I would like to name it <em>Ruby Review - 1</em>.</p>
+
+<h3 id="ruby-basics">Ruby basics</h3>
+<ol>
+  <li>Ruby is
+    <ul>
+      <li>Dynamic language</li>
+      <li>object oriented (object processed, almost everything is an object)</li>
+      <li>terse at times, but extremely readable</li>
+      <li>influence by Perl, Smalltalk, Eiffel, and Lisp</li>
+    </ul>
+  </li>
+  <li>2 space indentation for each nested level is encouraged.(not required, unlike python)</li>
+  <li><code class="highlighter-rouge">#</code> is used for comments</li>
+  <li>everything is evaluated
+    <div class="language-ruby highlighter-rouge"><pre class="highlight"><code> <span class="nb">puts</span> <span class="mi">5</span>	<span class="c1"># print out 5</span>
+ <span class="mi">3</span>     <span class="c1"># print out 3</span>
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>puts - standard ruby method to print out strings to the console (as in put string)
+       Adds a new line after the printed string
+       Similar to System.out.println() in Java</p>
+  </li>
+  <li>p - print out internal representation of an object
+       debug style output
+    <div class="language-ruby highlighter-rouge"><pre class="highlight"><code> <span class="nb">p</span> <span class="s2">"Got it"</span> <span class="c1"># =&gt; Got it </span>
+</code></pre>
+    </div>
+  </li>
+  <li>Naming conventions
+    <ul>
+      <li>variables: lower case or snake_case if multiple words</li>
+      <li>constants: ether ALL_CAPS or FirstCaps</li>
+      <li>class (and Modules): CamelCase</li>
+    </ul>
+  </li>
+  <li>Drop the semicolons
+       leave semicolons off at the end of the line
+       can cram several statements with a semicolon in between (usually highly discouraged)</li>
+</ol>
+
+<hr />
+
+<h3 id="flow-of-control">Flow of Control</h3>
+<ol>
+  <li>Flow of Control:  if/elseif/else       case      until/unless      while/for
+    <ul>
+      <li>no parentheses or curly braces
+use end to close flow control block</li>
+      <li>unless
+        <div class="language-ruby highlighter-rouge"><pre class="highlight"><code> <span class="n">a</span><span class="o">=</span> <span class="mi">5</span>
+ <span class="k">unless</span> <span class="n">a</span> <span class="o">==</span><span class="mi">6</span>
+   <span class="nb">puts</span> <span class="s2">"a is not 6"</span>
+ <span class="k">end</span>
+ <span class="c1"># =&gt; a is not 6 </span>
+</code></pre>
+        </div>
+      </li>
+      <li>while, until
+```ruby 
+ a = 10
+ while a &gt; 9
+   puts a
+   a -= 1
+ end
+ # =&gt; 10</li>
+    </ul>
+
+    <p>a = 9
+ until a &gt;= 10
+ 		puts a
+     a += 1
+     end
+ # =&gt; 9
+```</p>
+  </li>
+  <li>Flow Of Control: Modifier Form
+    <ul>
+      <li>if, unless, while, until - on the same line as the statement
+```ruby
+ # if modifier form
+ a = 5
+ b = 0
+ puts “One liner” is a == 5 and b == 0
+ # =&gt; One liner</li>
+    </ul>
+
+    <p>#while modifier form
+ times_2 = 2
+ times_2 *=2 while times_2 &lt; 100
+ puts times_2 
+ # =&gt; 128
+```</p>
+  </li>
+  <li>True/False
+    <ul>
+      <li><em>false</em> and <em>nil</em> objects are false</li>
+      <li>Everything else is true
+        <div class="language-ruby highlighter-rouge"><pre class="highlight"><code> <span class="nb">puts</span> <span class="s2">"0 is true"</span> <span class="k">if</span> <span class="mi">0</span>
+ <span class="nb">puts</span> <span class="s2">"false is true"</span> <span class="k">if</span> <span class="s2">"false"</span>
+ <span class="nb">puts</span> <span class="s2">"no way - false is false"</span> <span class="k">if</span> <span class="kp">false</span>
+ <span class="nb">puts</span> <span class="s2">"empty string is true"</span> <span class="k">if</span> <span class="s2">""</span>
+ <span class="nb">puts</span> <span class="s2">"nil is true"</span> <span class="k">if</span> <span class="s2">"nil"</span>
+ <span class="nb">puts</span> <span class="s2">"no way - nil is false"</span> <span class="k">if</span> <span class="kp">nil</span>
+</code></pre>
+        </div>
+      </li>
+    </ul>
+  </li>
+  <li>Triple Equal
+    <ul>
+      <li>Triple Equal: ===</li>
+      <li>sometimes it’s not about being exactly equal
+```ruby
+ if /sera/ == “coursera”  # regex
+   puts “Triple Equals”
+ end
+ # =&gt; Triple Equals</li>
+    </ul>
+
+    <p>if “coursera” == “coursera”
+     puts “also works”
+ end
+ # =&gt; also works</p>
+
+    <p>if Integer == 21
+     puts “21 is an Integer”
+ end
+ # =&gt; 21
+```</p>
+  </li>
+</ol>
+
+</div>
+
+  
+
+  <footer class="panel-footer">
+    <div class="container">
+    <section class="text-center"> 
+      <span style="font-weight: bold;">Contact Me:</span> <span> qiufengzhu11@gmail.com </span> 
+    </section>
+      <div class="text-center" style="font-size: 0.9em; margin-top: 7px;">Copyright &copy; Qiufeng Zhu 2017</div>
+    </div>
+  </footer> <!-- End of footer -->
+
+  <!-- jQuery (Bootstrap JS plugins depend on it) -->
+  <script src="/assets/js/jquery-2.1.4.min.js"></script>
+  <script src="/assets/js/bootstrap.min.js"></script>
+  <script src="/assets/js/script.js"></script>
+  
+
+</body>
+</html>

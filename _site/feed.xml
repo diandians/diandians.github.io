@@ -1,5 +1,152 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-08-19T12:08:55+08:00</updated><id>http://localhost:4000/</id><title type="html">Qiufeng Zhu</title><subtitle>Hi! I am Qiufeng Zhu. Welcome to my sites!
-</subtitle><entry><title type="html">How to build personal sites with Jekyll</title><link href="http://localhost:4000/2017/08/18/how-to-build-personal-sites-with-jekyll.html" rel="alternate" type="text/html" title="How to build personal sites with Jekyll" /><published>2017-08-18T00:00:00+08:00</published><updated>2017-08-18T00:00:00+08:00</updated><id>http://localhost:4000/2017/08/18/how-to-build-personal-sites-with-jekyll</id><content type="html" xml:base="http://localhost:4000/2017/08/18/how-to-build-personal-sites-with-jekyll.html">&lt;p&gt;This is a test page. It will be updated to be a real blog page very soon.&lt;/p&gt;</content><author><name></name></author><summary type="html">This is a test page. It will be updated to be a real blog page very soon.</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2017/08/17/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2017-08-17T20:37:40+08:00</published><updated>2017-08-17T20:37:40+08:00</updated><id>http://localhost:4000/jekyll/update/2017/08/17/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2017/08/17/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-08-24T22:27:38+08:00</updated><id>http://localhost:4000/</id><title type="html">Qiufeng Zhu</title><subtitle>Hi! I am Qiufeng Zhu. Welcome to my sites!
+</subtitle><entry><title type="html">Ruby Review - 1</title><link href="http://localhost:4000/ruby/2017/08/24/ruby-review.html" rel="alternate" type="text/html" title="Ruby Review - 1" /><published>2017-08-24T12:00:40+08:00</published><updated>2017-08-24T12:00:40+08:00</updated><id>http://localhost:4000/ruby/2017/08/24/ruby-review</id><content type="html" xml:base="http://localhost:4000/ruby/2017/08/24/ruby-review.html">&lt;p&gt;Web stuffs are not diffcult to learn, but they are easy to forget if we do not use them for a long time. To get them back, I would like to write a post to review them. I am going to list some basics and important stuffs in the post. Today’s topic is ruby. This topic will last for a few days, so I would like to name it &lt;em&gt;Ruby Review - 1&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;ruby-basics&quot;&gt;Ruby basics&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Ruby is
+    &lt;ul&gt;
+      &lt;li&gt;Dynamic language&lt;/li&gt;
+      &lt;li&gt;object oriented (object processed, almost everything is an object)&lt;/li&gt;
+      &lt;li&gt;terse at times, but extremely readable&lt;/li&gt;
+      &lt;li&gt;influence by Perl, Smalltalk, Eiffel, and Lisp&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;2 space indentation for each nested level is encouraged.(not required, unlike python)&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;#&lt;/code&gt; is used for comments&lt;/li&gt;
+  &lt;li&gt;everything is evaluated
+    &lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;# print out 5&lt;/span&gt;
+ &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;     &lt;span class=&quot;c1&quot;&gt;# print out 3&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;puts - standard ruby method to print out strings to the console (as in put string)
+       Adds a new line after the printed string
+       Similar to System.out.println() in Java&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;p - print out internal representation of an object
+       debug style output
+    &lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Got it&quot;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; Got it &lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Naming conventions
+    &lt;ul&gt;
+      &lt;li&gt;variables: lower case or snake_case if multiple words&lt;/li&gt;
+      &lt;li&gt;constants: ether ALL_CAPS or FirstCaps&lt;/li&gt;
+      &lt;li&gt;class (and Modules): CamelCase&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Drop the semicolons
+       leave semicolons off at the end of the line
+       can cram several statements with a semicolon in between (usually highly discouraged)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;flow-of-control&quot;&gt;Flow of Control&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Flow of Control:  if/elseif/else       case      until/unless      while/for
+    &lt;ul&gt;
+      &lt;li&gt;no parentheses or curly braces
+use end to close flow control block&lt;/li&gt;
+      &lt;li&gt;unless
+        &lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;
+ &lt;span class=&quot;k&quot;&gt;unless&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;
+   &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;a is not 6&quot;&lt;/span&gt;
+ &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+ &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; a is not 6 &lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;while, until
+```ruby 
+ a = 10
+ while a &amp;gt; 9
+   puts a
+   a -= 1
+ end
+ # =&amp;gt; 10&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;a = 9
+ until a &amp;gt;= 10
+ 		puts a
+     a += 1
+     end
+ # =&amp;gt; 9
+```&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Flow Of Control: Modifier Form
+    &lt;ul&gt;
+      &lt;li&gt;if, unless, while, until - on the same line as the statement
+```ruby
+ # if modifier form
+ a = 5
+ b = 0
+ puts “One liner” is a == 5 and b == 0
+ # =&amp;gt; One liner&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;#while modifier form
+ times_2 = 2
+ times_2 *=2 while times_2 &amp;lt; 100
+ puts times_2 
+ # =&amp;gt; 128
+```&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;True/False
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;false&lt;/em&gt; and &lt;em&gt;nil&lt;/em&gt; objects are false&lt;/li&gt;
+      &lt;li&gt;Everything else is true
+        &lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;0 is true&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+ &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;false is true&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;false&quot;&lt;/span&gt;
+ &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;no way - false is false&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;false&lt;/span&gt;
+ &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;empty string is true&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;
+ &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;nil is true&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;nil&quot;&lt;/span&gt;
+ &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;no way - nil is false&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;nil&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Triple Equal
+    &lt;ul&gt;
+      &lt;li&gt;Triple Equal: ===&lt;/li&gt;
+      &lt;li&gt;sometimes it’s not about being exactly equal
+```ruby
+ if /sera/ == “coursera”  # regex
+   puts “Triple Equals”
+ end
+ # =&amp;gt; Triple Equals&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;if “coursera” == “coursera”
+     puts “also works”
+ end
+ # =&amp;gt; also works&lt;/p&gt;
+
+    &lt;p&gt;if Integer == 21
+     puts “21 is an Integer”
+ end
+ # =&amp;gt; 21
+```&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">Web stuffs are not diffcult to learn, but they are easy to forget if we do not use them for a long time. To get them back, I would like to write a post to review them. I am going to list some basics and important stuffs in the post. Today’s topic is ruby. This topic will last for a few days, so I would like to name it Ruby Review - 1.</summary></entry><entry><title type="html">How to convert your personal sites to Jekyll</title><link href="http://localhost:4000/jekyll/2017/08/18/how-to-build-personal-sites-with-jekyll.html" rel="alternate" type="text/html" title="How to convert your personal sites to Jekyll" /><published>2017-08-18T00:00:00+08:00</published><updated>2017-08-18T00:00:00+08:00</updated><id>http://localhost:4000/jekyll/2017/08/18/how-to-build-personal-sites-with-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/2017/08/18/how-to-build-personal-sites-with-jekyll.html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; is a very cool static site generator, which is hosted by GitHub. You can host your personal blog or sites on [GitHub Page][gh-pages]. This personal website is built on Jekyll using &lt;a href=&quot;http://blog.getbootstrap.com/2015/11/24/bootstrap-3-3-6-released/&quot;&gt;Bootstrap v3.3.6&lt;/a&gt;. Today, I would like to share my experience how I built this sites. To make it concise, I would skip those front-end stuffs, like HTML, CSS, JavaScipt. I suggest that you have a knowledge of those before building your sites.&lt;/p&gt;
+
+&lt;h2 id=&quot;set-up&quot;&gt;Set up&lt;/h2&gt;
+
+&lt;h3 id=&quot;stactic-pages&quot;&gt;Stactic pages&lt;/h3&gt;
+
+&lt;p&gt;The first things you need to do is design your own statics pages. You may have many folders, like css, html, js, and files, like .html and so on.&lt;/p&gt;
+
+&lt;h3 id=&quot;install-jekyll&quot;&gt;Install Jekyll&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[gh-pages]&lt;/p&gt;</content><author><name></name></author><summary type="html">Introduction</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2017/08/17/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2017-08-17T20:37:40+08:00</published><updated>2017-08-17T20:37:40+08:00</updated><id>http://localhost:4000/jekyll/update/2017/08/17/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2017/08/17/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 
 &lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
 
