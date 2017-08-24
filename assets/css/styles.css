@@ -1,11 +1,17 @@
+
+---
+---
+
+@import "{{ site.theme }}";
+
 body {
 	font-size: 16px;
-	color:#fff;
-	background-color: #61122f;
+	color: #544943 !important;
+	background: #ece4d8 !important;
 }
 /* HEADER */
 #header-nav {
-	background-color: #c9bdc5;
+	background-color: #7c334f;
 	border-radius: 0;
 	border: 0;
 }
@@ -14,9 +20,38 @@ body {
 	padding-top: 25px;
 }
 
+h1 {
+	font-size: 1.85em;
+	border-bottom: .2em double #d3ccc1;
+	color: #7c334f;
+	text-align: center;
+	font-style: italic;
+	margin: 1.1em 0 .38em;
+	line-height: 1.2;
+	padding-bottom: 10px;
+}
+
+h2 {
+	font-size: 1.58em;
+	color: #7c334f;
+	margin: .95em 0 .5em;
+	border-bottom: .1em solid #D3CCC1;
+	line-height: 1.2;
+	padding-bottom: 10px;
+}
+ hr {
+ 	border: none;
+	outline: none;
+	height: 18px;
+	background: transparent url("../images/hr.jpg") center center repeat-x;
+	margin: 0 0 20px;
+ }
+ a a:hover {
+ 	color: #417090;
+ }
 .navbar-brand h1 {	/* your name */
 	font-family: 'Kaushan Script', cursive;
-	color: #87185e;
+	color: #e69b95;
 	font-size: 1.3em;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -35,12 +70,12 @@ body {
 }
 
 #nav-list a {
-	color: #951C49;
+	color: #e69b95;
   	text-align: center;
 }
 
 #nav-list a:hover, #navelist a:focus {
-  background: #E7E7E7;
+  background: #ece4d8;
 }
 #nav-list a span {
   font-size: 1.3em;
@@ -64,7 +99,7 @@ body {
 
 .container .jumbotron {
   box-shadow: 0 0 50px #3F0C1F;
-  border: 2px solid #3F0C1F;
+  border: 2px solid #544943;
   margin: 15px auto 70px;
 }
 /* add animation: fade in down; */
@@ -148,8 +183,8 @@ body {
   margin-top: 30px;
   padding-top: 35px;
   padding-bottom: 30px;
-  background-color: #222;
   border-top: 0;
+  background-color: #ece4d8;
 }
 /* END FOOTER */
 
@@ -170,7 +205,6 @@ body {
 .project a {
 	font-style: italic;
 	font-size: 1.2em;
-	color: #c9bdc5;
 }
 .project a:hover, #project a:focus {
 	text-decoration: none;
