@@ -128,3 +128,38 @@ Web stuffs are not diffcult to learn, but they are easy to forget if we do not u
   end
   # => 21
 ```
+***
+
+### Functions
+
+Technically, a *function* is defined *outside* of a class and a *method* is defined *inside* a class.
+In Ruby, every function/method has at least one class it belongs to. (not always written inside a class)
+1. So every function is a method in Ruby.
+2. Parentheses are optional.
+3. Return
+  * no need to declare type of parameters.
+  * can return whatever you want
+  * *return* keyword is optional(last executed line returned, everything is evaluated!)
+4. Expressive method names.
+  Names can end with: '?' - predicate methods; '!' - Dangerous side - effects(example later by strings)
+
+```ruby
+  def can_divide_by?(number)
+    return false if number.zero?
+    true
+  end
+
+  puts can_divide_by? 3 # => true
+  puts can_divide_by? 0 # => false
+```
+5. Default Arguments
+
+```ruby
+  def factorial_with_default (n = 5)
+    n == 0? 1: n * factorial_with_default(n - 1)
+  end
+
+  puts factorial_with_default 5 # => 120
+  puts factorial_with_default(3) # => 6
+```
+

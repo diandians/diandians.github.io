@@ -237,6 +237,48 @@ use end to close flow control block</li>
   <span class="c1"># =&gt; 21</span>
 </code></pre>
 </div>
+<hr />
+
+<h3 id="functions">Functions</h3>
+
+<p>Technically, a <em>function</em> is defined <em>outside</em> of a class and a <em>method</em> is defined <em>inside</em> a class.
+In Ruby, every function/method has at least one class it belongs to. (not always written inside a class)</p>
+<ol>
+  <li>So every function is a method in Ruby.</li>
+  <li>Parentheses are optional.</li>
+  <li>Return
+    <ul>
+      <li>no need to declare type of parameters.</li>
+      <li>can return whatever you want</li>
+      <li><em>return</em> keyword is optional(last executed line returned, everything is evaluated!)</li>
+    </ul>
+  </li>
+  <li>Expressive method names.
+  Names can end with: ‘?’ - predicate methods; ‘!’ - Dangerous side - effects(example later by strings)</li>
+</ol>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code>  <span class="k">def</span> <span class="nf">can_divide_by?</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+    <span class="k">return</span> <span class="kp">false</span> <span class="k">if</span> <span class="n">number</span><span class="p">.</span><span class="nf">zero?</span>
+    <span class="kp">true</span>
+  <span class="k">end</span>
+
+  <span class="nb">puts</span> <span class="n">can_divide_by?</span> <span class="mi">3</span> <span class="c1"># =&gt; true</span>
+  <span class="nb">puts</span> <span class="n">can_divide_by?</span> <span class="mi">0</span> <span class="c1"># =&gt; false</span>
+</code></pre>
+</div>
+<ol>
+  <li>Default Arguments</li>
+</ol>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code>  <span class="k">def</span> <span class="nf">factorial_with_default</span> <span class="p">(</span><span class="n">n</span> <span class="o">=</span> <span class="mi">5</span><span class="p">)</span>
+    <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">?</span> <span class="mi">1</span><span class="p">:</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorial_with_default</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+  <span class="k">end</span>
+
+  <span class="nb">puts</span> <span class="n">factorial_with_default</span> <span class="mi">5</span> <span class="c1"># =&gt; 120</span>
+  <span class="nb">puts</span> <span class="n">factorial_with_default</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># =&gt; 6</span>
+</code></pre>
+</div>
+
 
 </div>
 
