@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-T<div id="main-content" class="container">
+<div id="main-content" class="container">
     <div class="row">
     <div id="profile-container" class="col-lg-6 col-md-6 col-sm-6">
       <div class="jumbotron">

@@ -66,15 +66,20 @@ h4 {
  }
  a a:hover {
  	color: #417090;
+	font-size: 1.2em;
  }
+
  p {
  	font-family: 'Zilla Slab Highlight', cursive
  	text-align: justify;
  }
  ul li {
- 	padding-left: 10px; 	
+ 	list-style: none;
+ 	padding-left: 13px; 	
  }
-
+ #main-content ul li {
+ 	background: transparent url(../images/chevron.png) left 6px no-repeat;
+ }
  pre {
  	margin: 10px 0 20px;
 	padding: .7em;
@@ -90,6 +95,7 @@ h4 {
 	box-shadow: 0px 2px 0px #bdb6ad;
 	border: 2px solid #fff6e9;
 	max-width: 502px;
+	margin-top: 20px;
  }
  /* END GENERAL STYLES */
 
@@ -142,9 +148,6 @@ h4 {
 .navbar-header button.navbar-toggle, .navbar-header .icon-bar {
   border: 1px solid #ece4d8;
 }
-button.navbar-toggle:hover, {
-  background-color: black !important;
-}
 .navbar-header button.navbar-toggle {
   clear: both;
   margin-top: -30px;
@@ -153,12 +156,12 @@ button.navbar-toggle:hover, {
 /* END HEADER */
 /* MAIN CONTAINER */
 #main-content {
-	width: 80%;
+	width: 75%;
 	margin: 20px auto 20px;
 	padding: 30px 30px 30px 30px;
 	background-color: #efe8de;
 	border: 1px solid #f2eade;
-	box-shadow: 0px 0px 8px #3F0C1F;
+	box-shadow: 0px 1px 3px #3F0C1F;
 }
 
 /* HOME PAGE */
@@ -262,21 +265,19 @@ button.navbar-toggle:hover, {
 	margin: 5px auto 5px;
 }
 
-.caption img {
-	box-shadow: 0 0 50px #3F0C1F; 
-	border: 1.5px solid #3F0C1F;
-}
-.project a {
-	font-style: italic;
-	font-size: 1.2em;
-}
-.project a:hover, #project a:focus {
+/* END PROJECT */
+
+/* BLOG */
+#blogs {
+	font-size: 1.1em;
+	color: #544943; 
 	text-decoration: none;
-	background-color: #E7E7E7;
-	color: #61122f;
 }
 
-/* END PROJECT */
+#blogs:hover, #blogs:focus {
+	color: #82736a;
+}
+/* END BLOG */
 
 /********** Large devices only **********/
 @media (min-width: 1200px) {
@@ -303,6 +304,7 @@ button.navbar-toggle:hover, {
 	    background: url('../images/profile2_992.jpg') no-repeat;
 	    height: 290px;
 	    width: 200px;
+	    margin-right: 5px;
 	}
   	.container #profile-container {
   		height: 310px;
@@ -330,6 +332,9 @@ button.navbar-toggle:hover, {
 		width: 60%;
 	}
 	/* HOME PAGE */
+	#main-content {
+		width: 100% !important;
+	}
 }
 
 /********** Extra small devices only **********/
@@ -360,5 +365,10 @@ button.navbar-toggle:hover, {
 	    width: 140px;
 	}
 	/* HOME PAGE */
-
+	#main-content {
+		width: 100% !important;
+	}
+	.navbar-header button.navbar-toggle {
+		margin-right: 20px;
+	}
 }
