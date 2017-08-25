@@ -11,8 +11,8 @@ title: Blog
 	    <div class="row">
 	        <ul style="list-style-position: inside;">
 	           {% for post in site.posts %}
-	             <li style="">
-	               <a style="color: #544943; text-decoration: none;" href="{{ post.url }}">{{ post.title }}</a>
+	             <li style="list-style: none;">
+	               <a style="font-size: 1.1em; color: #544943; text-decoration: none;" href="{{ post.url }}">{{ post.title }}</a>
 	               - {{ post.date | date: "%d %B %Y" }}
 	               <span style="border: 1px solid #fff; border-radius: 10%; padding: 1px 2px 1px 2px;"> {{ post.categories}} </span>
 	             </li>
