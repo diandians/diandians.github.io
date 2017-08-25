@@ -95,7 +95,7 @@ h4 {
 	box-shadow: 0px 2px 0px #bdb6ad;
 	border: 2px solid #fff6e9;
 	max-width: 502px;
-	margin-top: 20px;
+	margin: 20px auto 20px;
  }
  /* END GENERAL STYLES */
 
@@ -130,9 +130,10 @@ h4 {
 
 #nav-list {
 	margin-top: 10px;
-	margin-right: 30px;
 }
-
+#nav-list li {
+	padding-left: 0px !important;
+}
 #nav-list a {
 	color: #e69b95;
   	text-align: center;
@@ -333,7 +334,7 @@ h4 {
 	}
 	/* HOME PAGE */
 	#main-content {
-		width: 100% !important;
+		width: 90% !important;
 	}
 }
 
