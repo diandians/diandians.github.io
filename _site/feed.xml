@@ -1,5 +1,45 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-08-26T02:18:25+08:00</updated><id>http://localhost:4000/</id><title type="html">Qiufeng Zhu</title><subtitle>Hi! I am Qiufeng Zhu. Welcome to my sites!
-</subtitle><entry><title type="html">Ruby Review - 1</title><link href="http://localhost:4000/ruby/2017/08/24/ruby-review.html" rel="alternate" type="text/html" title="Ruby Review - 1" /><published>2017-08-24T12:00:40+08:00</published><updated>2017-08-24T12:00:40+08:00</updated><id>http://localhost:4000/ruby/2017/08/24/ruby-review</id><content type="html" xml:base="http://localhost:4000/ruby/2017/08/24/ruby-review.html">&lt;p&gt;Web stuffs are not diffcult to learn, but they are easy to forget if we do not use them for a long time. To get them back, I would like to write a post to review them. I am going to list some basics and important stuffs in the post. Today’s topic is ruby. This topic will last for a few days, so I would like to name it &lt;em&gt;Ruby Review - 1&lt;/em&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-08-26T12:42:05+08:00</updated><id>http://localhost:4000/</id><title type="html">Qiufeng Zhu</title><subtitle>Hi! I am Qiufeng Zhu. Welcome to my sites!
+</subtitle><entry><title type="html">Ruby Review - 2</title><link href="http://localhost:4000/ruby/2017/08/26/ruby-review2.html" rel="alternate" type="text/html" title="Ruby Review - 2" /><published>2017-08-26T12:00:40+08:00</published><updated>2017-08-26T12:00:40+08:00</updated><id>http://localhost:4000/ruby/2017/08/26/ruby-review2</id><content type="html" xml:base="http://localhost:4000/ruby/2017/08/26/ruby-review2.html">&lt;p&gt;Fall semaster is coming. Tough life is around the corner. QQ. So later, I may update post less often. Though, I will try my best to write something good.&lt;/p&gt;
+
+&lt;h3 id=&quot;blocks&quot;&gt;Blocks&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Chunks of code
+    &lt;ul&gt;
+      &lt;li&gt;Enclosed between either curly braces({}) or the keywords &lt;em&gt;do&lt;/em&gt; and &lt;em&gt;end&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;passed to methods as last “parameter”
+Convention:&lt;/li&gt;
+      &lt;li&gt;Use {} when block content is a single line&lt;/li&gt;
+      &lt;li&gt;Use &lt;em&gt;do&lt;/em&gt; and &lt;em&gt;end&lt;/em&gt; when block content apans multiple lines&lt;/li&gt;
+      &lt;li&gt;Often used as iterators&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;times&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hello Worlds!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; Hello Words!&lt;/span&gt;
+
+  &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;times&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+      &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; 1&lt;/span&gt;
+
+  &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;times&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; 1&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Coding with blocks&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Implicit&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Use block_given? to see if block was passed in&lt;/li&gt;
+  &lt;li&gt;Use yield to “call” the block&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Fall semaster is coming. Tough life is around the corner. QQ. So later, I may update post less often. Though, I will try my best to write something good.</summary></entry><entry><title type="html">Ruby Review - 1</title><link href="http://localhost:4000/ruby/2017/08/24/ruby-review1.html" rel="alternate" type="text/html" title="Ruby Review - 1" /><published>2017-08-24T12:00:40+08:00</published><updated>2017-08-24T12:00:40+08:00</updated><id>http://localhost:4000/ruby/2017/08/24/ruby-review1</id><content type="html" xml:base="http://localhost:4000/ruby/2017/08/24/ruby-review1.html">&lt;p&gt;Web stuffs are not diffcult to learn, but they are easy to forget if we do not use them for a long time. To get them back, I would like to write a post to review them. I am going to list some basics and important stuffs in the post. Today’s topic is ruby. This topic will last for a few days, so I would like to name it &lt;em&gt;Ruby Review - 1&lt;/em&gt;. The notes are from a coursera course &lt;a href=&quot;https://www.coursera.org/learn/ruby-on-rails-intro&quot;&gt;Ruby on Rails: An Introduction&lt;/a&gt; from JHU. This is a good course for a beginner as well as those who want to review after a long time.&lt;/p&gt;
 
 &lt;h3 id=&quot;ruby-basics&quot;&gt;Ruby basics&lt;/h3&gt;
 &lt;ol&gt;
@@ -193,7 +233,24 @@ In Ruby, every function/method has at least one class it belongs to. (not always
   &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;factorial_with_default&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; 120&lt;/span&gt;
   &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;factorial_with_default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; 6&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><author><name></name></author><summary type="html">Web stuffs are not diffcult to learn, but they are easy to forget if we do not use them for a long time. To get them back, I would like to write a post to review them. I am going to list some basics and important stuffs in the post. Today’s topic is ruby. This topic will last for a few days, so I would like to name it Ruby Review - 1.</summary></entry><entry><title type="html">How to convert your personal sites to Jekyll</title><link href="http://localhost:4000/jekyll/2017/08/18/how-to-build-personal-sites-with-jekyll.html" rel="alternate" type="text/html" title="How to convert your personal sites to Jekyll" /><published>2017-08-18T00:00:00+08:00</published><updated>2017-08-18T00:00:00+08:00</updated><id>http://localhost:4000/jekyll/2017/08/18/how-to-build-personal-sites-with-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/2017/08/18/how-to-build-personal-sites-with-jekyll.html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;splat&quot;&gt;Splat&lt;/h3&gt;
+
+&lt;p&gt;prefixes parameter inside method definition (can even apply to &lt;em&gt;middle parameter&lt;/em&gt;, not just the last)&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;You can represent many parameters inside one parameter, just use *!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;one_param&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;another&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# Variable length parameters passed in&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# become an array&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;max&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;something&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;32&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;more&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; 32&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name></name></author><summary type="html">Web stuffs are not diffcult to learn, but they are easy to forget if we do not use them for a long time. To get them back, I would like to write a post to review them. I am going to list some basics and important stuffs in the post. Today’s topic is ruby. This topic will last for a few days, so I would like to name it Ruby Review - 1. The notes are from a coursera course Ruby on Rails: An Introduction from JHU. This is a good course for a beginner as well as those who want to review after a long time.</summary></entry><entry><title type="html">How to convert your personal sites to Jekyll</title><link href="http://localhost:4000/jekyll/2017/08/18/how-to-build-personal-sites-with-jekyll.html" rel="alternate" type="text/html" title="How to convert your personal sites to Jekyll" /><published>2017-08-18T00:00:00+08:00</published><updated>2017-08-18T00:00:00+08:00</updated><id>http://localhost:4000/jekyll/2017/08/18/how-to-build-personal-sites-with-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/2017/08/18/how-to-build-personal-sites-with-jekyll.html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; is a very cool static site generator, which is hosted by GitHub. You can host your personal blog or sites on [GitHub Page][gh-pages]. This personal website is built on Jekyll using &lt;a href=&quot;http://blog.getbootstrap.com/2015/11/24/bootstrap-3-3-6-released/&quot;&gt;Bootstrap v3.3.6&lt;/a&gt;. Today, I would like to share my experience how I built this sites. To make it concise, I would skip those front-end stuffs, like HTML, CSS, JavaScipt. I suggest that you have a knowledge of those before building your sites.&lt;/p&gt;
 

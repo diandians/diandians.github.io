@@ -5,7 +5,10 @@ date:   2017-08-24 12:00:40 +0800
 categories: ruby
 ---
 
-Web stuffs are not diffcult to learn, but they are easy to forget if we do not use them for a long time. To get them back, I would like to write a post to review them. I am going to list some basics and important stuffs in the post. Today's topic is ruby. This topic will last for a few days, so I would like to name it _Ruby Review - 1_.
+Web stuffs are not diffcult to learn, but they are easy to forget if we do not use them for a long time. To get them back, I would like to write a post to review them. I am going to list some basics and important stuffs in the post. Today's topic is ruby. This topic will last for a few days, so I would like to name it _Ruby Review - 1_. The notes are from a coursera course [Ruby on Rails: An Introduction][ror] from JHU. This is a good course for a beginner as well as those who want to review after a long time.
+
+[ror]: https://www.coursera.org/learn/ruby-on-rails-intro
+
 
 ### Ruby basics
 1. Ruby is 
@@ -163,3 +166,17 @@ In Ruby, every function/method has at least one class it belongs to. (not always
   puts factorial_with_default(3) # => 6
 ```
 
+### Splat
+
+prefixes parameter inside method definition (can even apply to _middle parameter_, not just the last)
+* You can represent many parameters inside one parameter, just use *!
+
+```ruby
+  def max(one_param, *numbers, another)
+    # Variable length parameters passed in
+    # become an array
+    numbers.max
+  end
+
+  puts max("something", 7, 32, -4, "more") # => 32
+```

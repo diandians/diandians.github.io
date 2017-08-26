@@ -17,7 +17,7 @@
     {"@context":"http://schema.org","@type":"WebPage","headline":"Installing Jekyll SEO Tag","description":"A Jekyll plugin to add metadata tags for search engines and social networks to better index and display your site’s content.","url":"http://jekyll.github.io/jekyll-seo-tag/installation/"}</script>
     <!-- End Jekyll SEO tag -->
 
-    <title> Qiufeng Zhu | Blog</title>
+    <title> Qiufeng Zhu | Ruby Review - 2</title>
     <link rel="stylesheet" href="/assets/main.css">
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
@@ -78,44 +78,52 @@
 	
 		<section class="bg-dark">
 			<div class="text-center"> 
-				<h1> Blog </h1>
+				<h1> Ruby Review - 2 </h1>
 			</div>
 		</section>
 
 	
-	<section>
-	<div class="container">
-	    <div class="row">
-	        <ul style="list-style-position: inside;">
-	           
-	             <li>
-	               <a id="blogs" href="/ruby/2017/08/26/ruby-review2.html">Ruby Review - 2</a>
-	               - 26 August 2017
-	               <span style="border: 1px solid #fff; border-radius: 10%; padding: 1px 2px 1px 2px;"> ruby </span>
-	             </li>
-	           
-	             <li>
-	               <a id="blogs" href="/ruby/2017/08/24/ruby-review1.html">Ruby Review - 1</a>
-	               - 24 August 2017
-	               <span style="border: 1px solid #fff; border-radius: 10%; padding: 1px 2px 1px 2px;"> ruby </span>
-	             </li>
-	           
-	             <li>
-	               <a id="blogs" href="/jekyll/2017/08/18/how-to-build-personal-sites-with-jekyll.html">How to convert your personal sites to Jekyll</a>
-	               - 18 August 2017
-	               <span style="border: 1px solid #fff; border-radius: 10%; padding: 1px 2px 1px 2px;"> jekyll </span>
-	             </li>
-	           
-	             <li>
-	               <a id="blogs" href="/jekyll/update/2017/08/17/welcome-to-jekyll.html">Welcome to Jekyll!</a>
-	               - 17 August 2017
-	               <span style="border: 1px solid #fff; border-radius: 10%; padding: 1px 2px 1px 2px;"> jekyllupdate </span>
-	             </li>
-	           
-	        </ul>
-	    </div>
-	</div>
-</section>
+	<p>Fall semaster is coming. Tough life is around the corner. QQ. So later, I may update post less often. Though, I will try my best to write something good.</p>
+
+<h3 id="blocks">Blocks</h3>
+
+<ol>
+  <li>Chunks of code
+    <ul>
+      <li>Enclosed between either curly braces({}) or the keywords <em>do</em> and <em>end</em></li>
+      <li>passed to methods as last “parameter”
+Convention:</li>
+      <li>Use {} when block content is a single line</li>
+      <li>Use <em>do</em> and <em>end</em> when block content apans multiple lines</li>
+      <li>Often used as iterators</li>
+    </ul>
+  </li>
+</ol>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code>  <span class="mi">1</span><span class="p">.</span><span class="nf">times</span> <span class="p">{</span><span class="nb">puts</span> <span class="s2">"Hello Worlds!"</span><span class="p">}</span>
+  <span class="c1"># =&gt; Hello Words!</span>
+
+  <span class="mi">2</span><span class="p">.</span><span class="nf">times</span> <span class="k">do</span> <span class="o">|</span><span class="n">index</span><span class="o">|</span>
+    <span class="k">if</span> <span class="n">index</span> <span class="o">&gt;</span> <span class="mi">0</span>
+      <span class="nb">puts</span> <span class="n">index</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+  <span class="c1"># =&gt; 1</span>
+
+  <span class="mi">2</span><span class="p">.</span><span class="nf">times</span> <span class="p">{</span><span class="o">|</span><span class="n">index</span><span class="o">|</span> <span class="nb">puts</span> <span class="n">index</span> <span class="k">if</span> <span class="n">index</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">}</span>
+  <span class="c1"># =&gt; 1</span>
+</code></pre>
+</div>
+
+<ol>
+  <li>Coding with blocks</li>
+</ol>
+
+<p>Implicit</p>
+<ul>
+  <li>Use block_given? to see if block was passed in</li>
+  <li>Use yield to “call” the block</li>
+</ul>
 
 </div>
 
