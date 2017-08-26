@@ -116,14 +116,104 @@ Convention:</li>
 </div>
 
 <ol>
-  <li>Coding with blocks</li>
+  <li>Coding with blocks
+There are two ways to configure a block in your own method.
+    <ul>
+      <li>Implicit
+        <ul>
+          <li>Use block_given? to see if block was passed in</li>
+          <li>Use yield to “call” the block</li>
+          <li>Need to check “block_given?”</li>
+          <li>Otherwise, an exception is thrown</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
 </ol>
 
-<p>Implicit</p>
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code>  <span class="k">def</span> <span class="nf">two_times_implicit</span>
+    <span class="k">return</span> <span class="s2">"No block"</span> <span class="k">unless</span> <span class="n">block_given</span>
+    <span class="k">yield</span>
+    <span class="k">yield</span>
+  <span class="k">end</span>
+  <span class="nb">puts</span> <span class="n">two_times_implicit</span> <span class="p">{</span><span class="nb">print</span> <span class="s2">"Hello"</span><span class="p">}</span> <span class="c1"># =&gt; Hello</span>
+                                          <span class="c1"># =&gt; Hello</span>
+  <span class="nb">puts</span> <span class="n">two_times</span> <span class="n">implicit</span> <span class="c1"># =&gt; No block</span>
+</code></pre>
+</div>
+
 <ul>
-  <li>Use block_given? to see if block was passed in</li>
-  <li>Use yield to “call” the block</li>
+  <li>Explicit
+    <ul>
+      <li>Use &amp; in front of the last “parameter”</li>
+      <li>Use call method to call the block</li>
+      <li>Explicit is more direct</li>
+    </ul>
+  </li>
 </ul>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code> <span class="k">def</span> <span class="nf">two_times_explicit</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">i_am_a_block</span><span class="p">)</span>
+   <span class="k">return</span> <span class="s2">"No block"</span> <span class="k">if</span> <span class="n">i_am_a_block</span><span class="p">.</span><span class="nf">nil?</span>
+   <span class="n">i_am_a_block</span><span class="p">.</span><span class="nf">call</span>
+   <span class="n">i_am_a_block</span><span class="p">.</span><span class="nf">call</span>
+ <span class="k">end</span>
+ <span class="nb">puts</span> <span class="n">two_times_explicit</span> <span class="c1"># =&gt; No block</span>
+ <span class="n">two_times_explicit</span> <span class="p">{</span><span class="nb">puts</span> <span class="s2">"Hello"</span><span class="p">}</span> <span class="c1"># =&gt; Hello</span>
+                                   <span class="c1"># =&gt; Hello</span>
+</code></pre>
+</div>
+
+<hr />
+<h3 id="files">Files</h3>
+
+<h4 id="reading-from-file">Reading from file</h4>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code>  <span class="no">File</span><span class="p">.</span><span class="nf">foreach</span><span class="p">(</span><span class="s1">'test.txt'</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">line</span><span class="o">|</span>
+    <span class="nb">puts</span> <span class="n">lines</span>     <span class="c1"># =&gt; The first line of the file</span>
+    <span class="nb">p</span> <span class="n">line</span>         <span class="c1"># =&gt; "The first line of the file\n"</span>
+    <span class="nb">p</span> <span class="n">line</span><span class="p">.</span><span class="nf">chomp</span>   <span class="c1"># =&gt; "The first line of the file" (chops off newline char))</span>
+    <span class="nb">p</span> <span class="n">line</span><span class="p">.</span><span class="nf">split</span>   <span class="c1"># =&gt; ["The", "first", "line", "of", "the", "file"]</span>
+  <span class="k">end</span>
+</code></pre>
+</div>
+
+<h4 id="reading-from-non-existing-file">Reading from non existing file</h4>
+<p>You will get an exception. Then you should handle the exception by using <em>rescue</em> keyword.
+(This would help you in cases where a real exception happens, like there’s something wrong with your network)</p>
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code>  <span class="k">begin</span>
+    <span class="no">File</span><span class="p">.</span><span class="nf">foreach</span><span class="p">(</span><span class="s1">'do_not_exist.txt'</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">line</span><span class="o">|</span>
+      <span class="nb">puts</span> <span class="n">line</span><span class="p">.</span><span class="nf">chomp</span>
+    <span class="k">end</span>
+    <span class="k">rescue</span> <span class="no">Exception</span> <span class="o">=&gt;</span> <span class="n">e</span>
+      <span class="nb">puts</span> <span class="n">e</span><span class="p">.</span><span class="nf">message</span>
+      <span class="nb">puts</span> <span class="s2">"Let's pretend this didn't happen..."</span>
+    <span class="k">end</span> 
+  <span class="k">end</span>  
+</code></pre>
+</div>
+
+<p>Alternative to Exceptions (for simple cases of not being able to find a file)</p>
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code>  <span class="k">if</span> <span class="no">File</span><span class="p">.</span><span class="nf">exist?</span> <span class="s1">'test.txt'</span>
+    <span class="no">File</span><span class="p">.</span><span class="nf">foreach</span><span class="p">(</span><span class="s1">'test.txt'</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">line</span><span class="o">|</span>
+      <span class="nb">puts</span> <span class="n">line</span><span class="p">.</span><span class="nf">chomp</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+</code></pre>
+</div>
+
+<h4 id="writing-to-file">Writing to File</h4>
+<p>The file is <em>automatically</em> closed after the block executes</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code>  <span class="no">File</span><span class="p">.</span><span class="nf">open</span><span class="p">(</span><span class="s2">"test1.txt"</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">file</span><span class="o">|</span>
+    <span class="n">file</span><span class="p">.</span><span class="nf">puts</span> <span class="s2">"One line"</span>
+    <span class="n">file</span><span class="p">.</span><span class="nf">puts</span> <span class="s2">"Another"</span>
+  <span class="k">end</span>
+</code></pre>
+</div>
+<hr />
+
+<p>Strings</p>
+
 
 </div>
 

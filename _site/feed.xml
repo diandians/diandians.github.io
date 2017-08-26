@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-08-26T12:42:05+08:00</updated><id>http://localhost:4000/</id><title type="html">Qiufeng Zhu</title><subtitle>Hi! I am Qiufeng Zhu. Welcome to my sites!
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-08-26T21:55:24+08:00</updated><id>http://localhost:4000/</id><title type="html">Qiufeng Zhu</title><subtitle>Hi! I am Qiufeng Zhu. Welcome to my sites!
 </subtitle><entry><title type="html">Ruby Review - 2</title><link href="http://localhost:4000/ruby/2017/08/26/ruby-review2.html" rel="alternate" type="text/html" title="Ruby Review - 2" /><published>2017-08-26T12:00:40+08:00</published><updated>2017-08-26T12:00:40+08:00</updated><id>http://localhost:4000/ruby/2017/08/26/ruby-review2</id><content type="html" xml:base="http://localhost:4000/ruby/2017/08/26/ruby-review2.html">&lt;p&gt;Fall semaster is coming. Tough life is around the corner. QQ. So later, I may update post less often. Though, I will try my best to write something good.&lt;/p&gt;
 
 &lt;h3 id=&quot;blocks&quot;&gt;Blocks&lt;/h3&gt;
@@ -32,14 +32,103 @@ Convention:&lt;/li&gt;
 &lt;/div&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;Coding with blocks&lt;/li&gt;
+  &lt;li&gt;Coding with blocks
+There are two ways to configure a block in your own method.
+    &lt;ul&gt;
+      &lt;li&gt;Implicit
+        &lt;ul&gt;
+          &lt;li&gt;Use block_given? to see if block was passed in&lt;/li&gt;
+          &lt;li&gt;Use yield to “call” the block&lt;/li&gt;
+          &lt;li&gt;Need to check “block_given?”&lt;/li&gt;
+          &lt;li&gt;Otherwise, an exception is thrown&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Implicit&lt;/p&gt;
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;two_times_implicit&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;No block&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;unless&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;block_given&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;yield&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;yield&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;two_times_implicit&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hello&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; Hello&lt;/span&gt;
+                                          &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; Hello&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;two_times&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;implicit&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; No block&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;ul&gt;
-  &lt;li&gt;Use block_given? to see if block was passed in&lt;/li&gt;
-  &lt;li&gt;Use yield to “call” the block&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">Fall semaster is coming. Tough life is around the corner. QQ. So later, I may update post less often. Though, I will try my best to write something good.</summary></entry><entry><title type="html">Ruby Review - 1</title><link href="http://localhost:4000/ruby/2017/08/24/ruby-review1.html" rel="alternate" type="text/html" title="Ruby Review - 1" /><published>2017-08-24T12:00:40+08:00</published><updated>2017-08-24T12:00:40+08:00</updated><id>http://localhost:4000/ruby/2017/08/24/ruby-review1</id><content type="html" xml:base="http://localhost:4000/ruby/2017/08/24/ruby-review1.html">&lt;p&gt;Web stuffs are not diffcult to learn, but they are easy to forget if we do not use them for a long time. To get them back, I would like to write a post to review them. I am going to list some basics and important stuffs in the post. Today’s topic is ruby. This topic will last for a few days, so I would like to name it &lt;em&gt;Ruby Review - 1&lt;/em&gt;. The notes are from a coursera course &lt;a href=&quot;https://www.coursera.org/learn/ruby-on-rails-intro&quot;&gt;Ruby on Rails: An Introduction&lt;/a&gt; from JHU. This is a good course for a beginner as well as those who want to review after a long time.&lt;/p&gt;
+  &lt;li&gt;Explicit
+    &lt;ul&gt;
+      &lt;li&gt;Use &amp;amp; in front of the last “parameter”&lt;/li&gt;
+      &lt;li&gt;Use call method to call the block&lt;/li&gt;
+      &lt;li&gt;Explicit is more direct&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;two_times_explicit&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i_am_a_block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+   &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;No block&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i_am_a_block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;nil?&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;i_am_a_block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;call&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;i_am_a_block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;call&lt;/span&gt;
+ &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+ &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;two_times_explicit&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; No block&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;two_times_explicit&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hello&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; Hello&lt;/span&gt;
+                                   &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; Hello&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;files&quot;&gt;Files&lt;/h3&gt;
+
+&lt;h4 id=&quot;reading-from-file&quot;&gt;Reading from file&lt;/h4&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;foreach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'test.txt'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lines&lt;/span&gt;     &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; The first line of the file&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;         &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; &quot;The first line of the file\n&quot;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;chomp&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; &quot;The first line of the file&quot; (chops off newline char))&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;split&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; [&quot;The&quot;, &quot;first&quot;, &quot;line&quot;, &quot;of&quot;, &quot;the&quot;, &quot;file&quot;]&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;reading-from-non-existing-file&quot;&gt;Reading from non existing file&lt;/h4&gt;
+&lt;p&gt;You will get an exception. Then you should handle the exception by using &lt;em&gt;rescue&lt;/em&gt; keyword.
+(This would help you in cases where a real exception happens, like there’s something wrong with your network)&lt;/p&gt;
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;k&quot;&gt;begin&lt;/span&gt;
+    &lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;foreach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'do_not_exist.txt'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+      &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;chomp&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;rescue&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;
+      &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;message&lt;/span&gt;
+      &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Let's pretend this didn't happen...&quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt; 
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;  
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Alternative to Exceptions (for simple cases of not being able to find a file)&lt;/p&gt;
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;exist?&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'test.txt'&lt;/span&gt;
+    &lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;foreach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'test.txt'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+      &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;chomp&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;writing-to-file&quot;&gt;Writing to File&lt;/h4&gt;
+&lt;p&gt;The file is &lt;em&gt;automatically&lt;/em&gt; closed after the block executes&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;test1.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;w&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;One line&quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Another&quot;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;Strings&lt;/p&gt;</content><author><name></name></author><summary type="html">Fall semaster is coming. Tough life is around the corner. QQ. So later, I may update post less often. Though, I will try my best to write something good.</summary></entry><entry><title type="html">Ruby Review - 1</title><link href="http://localhost:4000/ruby/2017/08/24/ruby-review1.html" rel="alternate" type="text/html" title="Ruby Review - 1" /><published>2017-08-24T12:00:40+08:00</published><updated>2017-08-24T12:00:40+08:00</updated><id>http://localhost:4000/ruby/2017/08/24/ruby-review1</id><content type="html" xml:base="http://localhost:4000/ruby/2017/08/24/ruby-review1.html">&lt;p&gt;Web stuffs are not diffcult to learn, but they are easy to forget if we do not use them for a long time. To get them back, I would like to write a post to review them. I am going to list some basics and important stuffs in the post. Today’s topic is ruby. This topic will last for a few days, so I would like to name it &lt;em&gt;Ruby Review - 1&lt;/em&gt;. The notes are from a coursera course &lt;a href=&quot;https://www.coursera.org/learn/ruby-on-rails-intro&quot;&gt;Ruby on Rails: An Introduction&lt;/a&gt; from JHU. This is a good course for a beginner as well as those who want to review after a long time.&lt;/p&gt;
 
 &lt;h3 id=&quot;ruby-basics&quot;&gt;Ruby basics&lt;/h3&gt;
 &lt;ol&gt;
@@ -252,28 +341,31 @@ In Ruby, every function/method has at least one class it belongs to. (not always
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;</content><author><name></name></author><summary type="html">Web stuffs are not diffcult to learn, but they are easy to forget if we do not use them for a long time. To get them back, I would like to write a post to review them. I am going to list some basics and important stuffs in the post. Today’s topic is ruby. This topic will last for a few days, so I would like to name it Ruby Review - 1. The notes are from a coursera course Ruby on Rails: An Introduction from JHU. This is a good course for a beginner as well as those who want to review after a long time.</summary></entry><entry><title type="html">How to convert your personal sites to Jekyll</title><link href="http://localhost:4000/jekyll/2017/08/18/how-to-build-personal-sites-with-jekyll.html" rel="alternate" type="text/html" title="How to convert your personal sites to Jekyll" /><published>2017-08-18T00:00:00+08:00</published><updated>2017-08-18T00:00:00+08:00</updated><id>http://localhost:4000/jekyll/2017/08/18/how-to-build-personal-sites-with-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/2017/08/18/how-to-build-personal-sites-with-jekyll.html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; is a very cool static site generator, which is hosted by GitHub. You can host your personal blog or sites on [GitHub Page][gh-pages]. This personal website is built on Jekyll using &lt;a href=&quot;http://blog.getbootstrap.com/2015/11/24/bootstrap-3-3-6-released/&quot;&gt;Bootstrap v3.3.6&lt;/a&gt;. Today, I would like to share my experience how I built this sites. To make it concise, I would skip those front-end stuffs, like HTML, CSS, JavaScipt. I suggest that you have a knowledge of those before building your sites.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; is a very cool static site generator, which is hosted by GitHub. You can host your personal blog or sites on &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Page&lt;/a&gt;. This personal website is built on Jekyll using &lt;a href=&quot;http://blog.getbootstrap.com/2015/11/24/bootstrap-3-3-6-released/&quot;&gt;Bootstrap v3.3.6&lt;/a&gt;. Today, I would like to share my experience how I built this sites. To make it concise, I would skip those front-end stuffs, like HTML, CSS, JavaScipt. I suggest that you have a knowledge of those before building your sites.&lt;/p&gt;
 
 &lt;h2 id=&quot;set-up&quot;&gt;Set up&lt;/h2&gt;
 
-&lt;h3 id=&quot;stactic-pages&quot;&gt;Stactic pages&lt;/h3&gt;
+&lt;h3 id=&quot;prepare-stactic-pages&quot;&gt;Prepare stactic pages&lt;/h3&gt;
 
 &lt;p&gt;The first things you need to do is design your own statics pages. You may have many folders, like css, html, js, and files, like .html and so on.&lt;/p&gt;
 
 &lt;h3 id=&quot;install-jekyll&quot;&gt;Install Jekyll&lt;/h3&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Install Jekyll. If you are Linux/Unix/MacOS, install from &lt;a href=&quot;https://jekyllrb.com/docs/installation/&quot;&gt;here&lt;/a&gt;; If you are Windows, please install from &lt;a href=&quot;https://jekyllrb.com/docs/windows/&quot;&gt;here&lt;/a&gt;. Windows version is strongly not recommended, because you may meet something unexpected problems. I have tried on my win10 and I spend a long time on solving the problems. Though, it still did not work. So, to save your time, you’d best do it on Linux or MacOS.&lt;/p&gt;
 
-&lt;p&gt;[gh-pages]&lt;/p&gt;</content><author><name></name></author><summary type="html">Introduction</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2017/08/17/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2017-08-17T20:37:40+08:00</published><updated>2017-08-17T20:37:40+08:00</updated><id>http://localhost:4000/jekyll/update/2017/08/17/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2017/08/17/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+&lt;p&gt;After finishing installation, validate it on terminal by typing &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll -version&lt;/code&gt;. You should get the version if you have installed it successfully.&lt;/p&gt;
 
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;h2 id=&quot;deploy-your-sites-with-jekyll-on-github-pages&quot;&gt;Deploy your sites with jekyll on Github Pages&lt;/h2&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;p&gt;On terminal, type &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll new my-sites&lt;/code&gt; to get &lt;a href=&quot;https://github.com/jekyll/minima&quot;&gt;minima&lt;/a&gt;, which is the basic jekyll-theme and you can revise it later to customize your sites. Now you have a &lt;code class=&quot;highlighter-rouge&quot;&gt;my-sites&lt;/code&gt; folder in your local directory.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;In your Github, new a repo and name it &lt;code class=&quot;highlighter-rouge&quot;&gt;[your_github_name].github.io&lt;/code&gt;. Then, &lt;code class=&quot;highlighter-rouge&quot;&gt;git clone&lt;/code&gt; this repo or download it to your local directory; Copy and paste the stuffs from my-sites into the repo directory. Now you can try to deploy it on the github.&lt;/p&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  $ git add .
+  $ git commit -m &quot;init commit&quot;
+  $ git push
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Go to the setting of personal sites’ repo, scroll down and you can see the Github Pages section. Choose master branch as Sourse and save it. Then you can visit your sites via http://[your_github_name].github.io.&lt;/p&gt;
+
+&lt;p&gt;###&lt;/p&gt;</content><author><name></name></author><summary type="html">Introduction</summary></entry></feed>
