@@ -17,7 +17,7 @@
     {"@context":"http://schema.org","@type":"WebPage","headline":"Installing Jekyll SEO Tag","description":"A Jekyll plugin to add metadata tags for search engines and social networks to better index and display your site’s content.","url":"http://jekyll.github.io/jekyll-seo-tag/installation/"}</script>
     <!-- End Jekyll SEO tag -->
 
-    <title> Qiufeng Zhu | How to convert your personal sites to Jekyll</title>
+    <title> Qiufeng Zhu | How to build personal sites with Jekyll</title>
     <link rel="stylesheet" href="/assets/main.css">
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
@@ -78,7 +78,7 @@
 	
 		<section class="bg-dark">
 			<div class="text-center"> 
-				<h1> How to convert your personal sites to Jekyll </h1>
+				<h1> How to build personal sites with Jekyll </h1>
 			</div>
 		</section>
 
@@ -112,7 +112,66 @@
 </div>
 <p>Go to the setting of personal sites’ repo, scroll down and you can see the Github Pages section. Choose master branch as Sourse and save it. Then you can visit your sites via http://[your_github_name].github.io.</p>
 
-<p>###</p>
+<h3 id="convert-your-static-sites-to-jekyll">Convert your static sites to jekyll</h3>
+
+<p>Now you have your personal static pages, like HTML, CSS, etc. You can create a folder called <em>assets</em>. In this folder, you can put CSS in <em>css</em> folder; JavaScript in <em>js</em> folder; Images in <em>images</em>; Fonts in <em>fonts</em> folder. In the _layout folder, place your HTML files. For more information, you can refer <a href="https://jekyllrb.com/docs/structure/">here</a> to see the directory structure of jekyll.</p>
+
+<p>To make the HTML more readable, you can set a default.html which will be a default template for every page. It can include navbar, head, footer, etc. Replace your main content div by <code class="highlighter-rouge"><span class="p">{</span><span class="err">{</span><span class="w"> </span><span class="err">conten</span><span class="w"> </span><span class="p">}</span><span class="err">}</span></code>. Then, the <code class="highlighter-rouge"><span class="p">{</span><span class="err">{content</span><span class="p">}</span><span class="err">}</span></code> will render page.html which will be introduced later. For reference, please check my code on <a href="https://github.com/diandians/diandians.github.io/blob/master/_layouts/default.html">Github</a>. Additionally, create another file and name it page.html, and include the default layout at the beginning. Place default.html and page.html in the _layout folder.</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code>---
+
+layout: default
+
+---
+
+<span class="nt">&lt;body&gt;</span>
+<span class="nt">&lt;h1&gt;</span> Hi, I am {{site.title}<span class="nt">&lt;/h1&gt;</span>}
+{{content}} 
+  <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"panel-footer"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"text-center"</span><span class="nt">&gt;</span> 
+      <span class="nt">&lt;span&gt;</span>Contact Me:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span&gt;</span> {{ site.email }} <span class="nt">&lt;/span&gt;</span> 
+    <span class="nt">&lt;/section&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text-center"</span> <span class="na">style=</span><span class="s">"font-size: 0.9em; margin-top: 7px;"</span><span class="nt">&gt;</span>Copyright <span class="ni">&amp;copy;</span> {{site.title}} 2017<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/footer&gt;</span> <span class="c">&lt;!-- End of footer --&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+ 
+
+</code></pre>
+</div>
+<p>The page.html contains main-content div and you can set something special for different pages. For example, you can show an h1 title in the page except home page using embeded ruby. Then, include page layout in your HTML files like index.html, blog.html, etc, and <code class="highlighter-rouge"><span class="p">{</span><span class="err">{content</span><span class="p">}</span><span class="err">}</span></code> will render the real content in index.html, blog.html or any other HTML files.</p>
+<div class="language-html highlighter-rouge"><pre class="highlight"><code>---
+
+layout: default
+
+---
+
+<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"main-content"</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+  {% if page.title != 'Home' %}
+    <span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"bg-dark"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text-center"</span><span class="nt">&gt;</span> 
+        <span class="nt">&lt;h1&gt;</span> {{ page.title }} <span class="nt">&lt;/h1&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/section&gt;</span>
+
+  {% endif %}
+  {{ content }}
+<span class="nt">&lt;/div&gt;</span>
+ 
+</code></pre>
+</div>
+<p>Finally, you can write your blog post! Create your markdown file in the _post folder. To know about kramdown syntax, Click <a href="https://kramdown.gettalong.org/quickref.html">here</a> to get quick start.</p>
+
+<h2 id="customized-your-domain-name">Customized your domain name</h2>
+
+<p>Github-pages allowed you to customize your domain name, you can get the instruction from <a href="https://help.github.com/articles/using-a-custom-domain-with-github-pages/">here</a>. I used <a href="https://www.namesilo.com/">NameSilo</a>, just because it’s very cheap.</p>
+
+<p>After you sign up and order your domain name, get into <code class="highlighter-rouge">Manage My Domain</code> to manage the DNS settings. In the DNS template, choose Github and Apply Template. Last but not least, create a file called CNAME in your [github_name].github.io directory. In the CNAME file, you should put your domain name. Take mine as an example, I put www.qiufengzhu.com in the CNAME, which you can find it <a href="https://github.com/diandians/diandians.github.io/blob/master/CNAME">here</a>.</p>
+
+<p>Now, your have built your personal sites with jekyll!</p>
+
+<p>Reference: <a href="https://learn.cloudcannon.com/jekyll/converting-a-static-site-to-jekyll/">https://learn.cloudcannon.com/jekyll/converting-a-static-site-to-jekyll</a></p>
 
 
 </div>

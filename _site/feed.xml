@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-08-26T21:55:24+08:00</updated><id>http://localhost:4000/</id><title type="html">Qiufeng Zhu</title><subtitle>Hi! I am Qiufeng Zhu. Welcome to my sites!
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-08-30T02:36:27+08:00</updated><id>http://localhost:4000/</id><title type="html">Qiufeng Zhu</title><subtitle>Hi! I am Qiufeng Zhu. Welcome to my sites!
 </subtitle><entry><title type="html">Ruby Review - 2</title><link href="http://localhost:4000/ruby/2017/08/26/ruby-review2.html" rel="alternate" type="text/html" title="Ruby Review - 2" /><published>2017-08-26T12:00:40+08:00</published><updated>2017-08-26T12:00:40+08:00</updated><id>http://localhost:4000/ruby/2017/08/26/ruby-review2</id><content type="html" xml:base="http://localhost:4000/ruby/2017/08/26/ruby-review2.html">&lt;p&gt;Fall semaster is coming. Tough life is around the corner. QQ. So later, I may update post less often. Though, I will try my best to write something good.&lt;/p&gt;
 
 &lt;h3 id=&quot;blocks&quot;&gt;Blocks&lt;/h3&gt;
@@ -128,7 +128,113 @@ There are two ways to configure a block in your own method.
 &lt;/div&gt;
 &lt;hr /&gt;
 
-&lt;p&gt;Strings&lt;/p&gt;</content><author><name></name></author><summary type="html">Fall semaster is coming. Tough life is around the corner. QQ. So later, I may update post less often. Though, I will try my best to write something good.</summary></entry><entry><title type="html">Ruby Review - 1</title><link href="http://localhost:4000/ruby/2017/08/24/ruby-review1.html" rel="alternate" type="text/html" title="Ruby Review - 1" /><published>2017-08-24T12:00:40+08:00</published><updated>2017-08-24T12:00:40+08:00</updated><id>http://localhost:4000/ruby/2017/08/24/ruby-review1</id><content type="html" xml:base="http://localhost:4000/ruby/2017/08/24/ruby-review1.html">&lt;p&gt;Web stuffs are not diffcult to learn, but they are easy to forget if we do not use them for a long time. To get them back, I would like to write a post to review them. I am going to list some basics and important stuffs in the post. Today’s topic is ruby. This topic will last for a few days, so I would like to name it &lt;em&gt;Ruby Review - 1&lt;/em&gt;. The notes are from a coursera course &lt;a href=&quot;https://www.coursera.org/learn/ruby-on-rails-intro&quot;&gt;Ruby on Rails: An Introduction&lt;/a&gt; from JHU. This is a good course for a beginner as well as those who want to review after a long time.&lt;/p&gt;
+&lt;h3 id=&quot;strings&quot;&gt;Strings&lt;/h3&gt;
+&lt;h4 id=&quot;stringinterpolation&quot;&gt;String/Interpolation&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Single-quote literal strings are very literal
+    &lt;ul&gt;
+      &lt;li&gt;Allow escaping of ` with \&lt;/li&gt;
+      &lt;li&gt;Show (almost) everything else as is&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Double-quoted strings
+    &lt;ul&gt;
+      &lt;li&gt;Interpret special characters line \n and \t&lt;/li&gt;
+      &lt;li&gt;Allow string interpolation!&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;n&quot;&gt;single_quoted&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'ice cream \n followed by it\'s a party!'&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;double_quoted&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;ice cream &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; followed by it&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\'&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;s a party!&quot;&lt;/span&gt;
+
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;single_quoted&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; ice cream \n followed by it's a party!&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;double_quoted&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; ice cream&lt;/span&gt;
+  
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;multiply&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;one&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;two&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;one&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; multiplied by &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;two&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; equals &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;one&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;two&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;## interpolation(only available for double-quoted strings)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;multiply&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; 5 multiplied by 3 equals 15&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;more-strings&quot;&gt;More Strings&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;String methods ending with ! modify the existing string, most others just return a new string&lt;/li&gt;
+  &lt;li&gt;Can also use %Q{long multiline string} (same behavior as double-quoted string)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;n&quot;&gt;my_name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot; tim&quot;&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;my_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;lstrip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;capitalize&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; Tim&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;my_name&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; &quot; tim&quot;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;my_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;lstrip!&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# (destructive) removes the leading space&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;my_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'K'&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# replace the first character&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;my_name&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; Kim&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;cur_weather&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;%Q{It's a hot day outside
+                   Grab you umbrellas...}&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;cur_weather&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;lines&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;sub!&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'hot'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'rainy'&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# substitute 'hot' with 'rainy'&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;strip&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; It's a rainy day outside&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; Grab your umbrellas...&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;String APIs
+Go to &lt;code class=&quot;highlighter-rouge&quot;&gt;ruby-doc.org&lt;/code&gt; to get more information about String APIs.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;symbols&quot;&gt;Symbols&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Guaranteed to be &lt;em&gt;unique&lt;/em&gt; and &lt;em&gt;immutable&lt;/em&gt; (useful in hash table as key, etc)&lt;/li&gt;
+  &lt;li&gt;Can be converted to a String with to_s; Or from String to SYmbol with to_sym&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;arrays&quot;&gt;Arrays&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Collection of object references (auto-expandable)&lt;/li&gt;
+  &lt;li&gt;Indexed using [] operator (method)&lt;/li&gt;
+  &lt;li&gt;Can be indexed with negative numbers or ranges&lt;/li&gt;
+  &lt;li&gt;Heterogeneous types allowed in the same array&lt;/li&gt;
+  &lt;li&gt;Can use %w{str1 str2} for string array creation&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;n&quot;&gt;her_arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;two&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:three&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# heterogeneous types&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;her_arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; two (array indices start at 0)&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;arr_words&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;%w{ what a great day today!}&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr_words&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; day&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr_words&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; - # {arr_words.last}&quot;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; what - today!&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr_words&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; [&quot;great&quot;, &quot;day&quot;] (go back 3 and take 2)&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;# (Range type covered later...)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr_words&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; ['great', &quot;day&quot;, &quot;today&quot;]&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;# Make a String out of array elements separated by ','&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr_words&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;','&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; what, a, great, day, today!&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Modifying arrays&lt;/li&gt;
+  &lt;li&gt;Append: push or «&lt;/li&gt;
+  &lt;li&gt;Remove: pop or shift&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Set: [] = (method)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Randomly pull elements out with sample&lt;/li&gt;
+  &lt;li&gt;Sort or reverse with sort! and reverse!&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Fall semaster is coming. Tough life is around the corner. QQ. So later, I may update post less often. Though, I will try my best to write something good.</summary></entry><entry><title type="html">Ruby Review - 1</title><link href="http://localhost:4000/ruby/2017/08/24/ruby-review1.html" rel="alternate" type="text/html" title="Ruby Review - 1" /><published>2017-08-24T12:00:40+08:00</published><updated>2017-08-24T12:00:40+08:00</updated><id>http://localhost:4000/ruby/2017/08/24/ruby-review1</id><content type="html" xml:base="http://localhost:4000/ruby/2017/08/24/ruby-review1.html">&lt;p&gt;Web stuffs are not diffcult to learn, but they are easy to forget if we do not use them for a long time. To get them back, I would like to write a post to review them. I am going to list some basics and important stuffs in the post. Today’s topic is ruby. This topic will last for a few days, so I would like to name it &lt;em&gt;Ruby Review - 1&lt;/em&gt;. The notes are from a coursera course &lt;a href=&quot;https://www.coursera.org/learn/ruby-on-rails-intro&quot;&gt;Ruby on Rails: An Introduction&lt;/a&gt; from JHU. This is a good course for a beginner as well as those who want to review after a long time.&lt;/p&gt;
 
 &lt;h3 id=&quot;ruby-basics&quot;&gt;Ruby basics&lt;/h3&gt;
 &lt;ol&gt;
@@ -339,7 +445,7 @@ In Ruby, every function/method has at least one class it belongs to. (not always
 
   &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;something&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;32&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;more&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; 32&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><author><name></name></author><summary type="html">Web stuffs are not diffcult to learn, but they are easy to forget if we do not use them for a long time. To get them back, I would like to write a post to review them. I am going to list some basics and important stuffs in the post. Today’s topic is ruby. This topic will last for a few days, so I would like to name it Ruby Review - 1. The notes are from a coursera course Ruby on Rails: An Introduction from JHU. This is a good course for a beginner as well as those who want to review after a long time.</summary></entry><entry><title type="html">How to convert your personal sites to Jekyll</title><link href="http://localhost:4000/jekyll/2017/08/18/how-to-build-personal-sites-with-jekyll.html" rel="alternate" type="text/html" title="How to convert your personal sites to Jekyll" /><published>2017-08-18T00:00:00+08:00</published><updated>2017-08-18T00:00:00+08:00</updated><id>http://localhost:4000/jekyll/2017/08/18/how-to-build-personal-sites-with-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/2017/08/18/how-to-build-personal-sites-with-jekyll.html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;/div&gt;</content><author><name></name></author><summary type="html">Web stuffs are not diffcult to learn, but they are easy to forget if we do not use them for a long time. To get them back, I would like to write a post to review them. I am going to list some basics and important stuffs in the post. Today’s topic is ruby. This topic will last for a few days, so I would like to name it Ruby Review - 1. The notes are from a coursera course Ruby on Rails: An Introduction from JHU. This is a good course for a beginner as well as those who want to review after a long time.</summary></entry><entry><title type="html">How to build personal sites with Jekyll</title><link href="http://localhost:4000/jekyll/2017/08/18/how-to-build-personal-sites-with-jekyll.html" rel="alternate" type="text/html" title="How to build personal sites with Jekyll" /><published>2017-08-18T00:00:00+08:00</published><updated>2017-08-18T00:00:00+08:00</updated><id>http://localhost:4000/jekyll/2017/08/18/how-to-build-personal-sites-with-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/2017/08/18/how-to-build-personal-sites-with-jekyll.html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; is a very cool static site generator, which is hosted by GitHub. You can host your personal blog or sites on &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Page&lt;/a&gt;. This personal website is built on Jekyll using &lt;a href=&quot;http://blog.getbootstrap.com/2015/11/24/bootstrap-3-3-6-released/&quot;&gt;Bootstrap v3.3.6&lt;/a&gt;. Today, I would like to share my experience how I built this sites. To make it concise, I would skip those front-end stuffs, like HTML, CSS, JavaScipt. I suggest that you have a knowledge of those before building your sites.&lt;/p&gt;
 
@@ -368,4 +474,63 @@ In Ruby, every function/method has at least one class it belongs to. (not always
 &lt;/div&gt;
 &lt;p&gt;Go to the setting of personal sites’ repo, scroll down and you can see the Github Pages section. Choose master branch as Sourse and save it. Then you can visit your sites via http://[your_github_name].github.io.&lt;/p&gt;
 
-&lt;p&gt;###&lt;/p&gt;</content><author><name></name></author><summary type="html">Introduction</summary></entry></feed>
+&lt;h3 id=&quot;convert-your-static-sites-to-jekyll&quot;&gt;Convert your static sites to jekyll&lt;/h3&gt;
+
+&lt;p&gt;Now you have your personal static pages, like HTML, CSS, etc. You can create a folder called &lt;em&gt;assets&lt;/em&gt;. In this folder, you can put CSS in &lt;em&gt;css&lt;/em&gt; folder; JavaScript in &lt;em&gt;js&lt;/em&gt; folder; Images in &lt;em&gt;images&lt;/em&gt;; Fonts in &lt;em&gt;fonts&lt;/em&gt; folder. In the _layout folder, place your HTML files. For more information, you can refer &lt;a href=&quot;https://jekyllrb.com/docs/structure/&quot;&gt;here&lt;/a&gt; to see the directory structure of jekyll.&lt;/p&gt;
+
+&lt;p&gt;To make the HTML more readable, you can set a default.html which will be a default template for every page. It can include navbar, head, footer, etc. Replace your main content div by &lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;conten&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;&lt;/code&gt;. Then, the &lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;&lt;/code&gt; will render page.html which will be introduced later. For reference, please check my code on &lt;a href=&quot;https://github.com/diandians/diandians.github.io/blob/master/_layouts/default.html&quot;&gt;Github&lt;/a&gt;. Additionally, create another file and name it page.html, and include the default layout at the beginning. Place default.html and page.html in the _layout folder.&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
+
+layout: default
+
+---
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt; Hi, I am {{site.title}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;}
+{{content}} 
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;footer&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;panel-footer&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;container&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;section&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text-center&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; 
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&amp;gt;&lt;/span&gt;Contact Me:&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&amp;gt;&lt;/span&gt; {{ site.email }} &lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt; 
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/section&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text-center&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;style=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;font-size: 0.9em; margin-top: 7px;&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Copyright &lt;span class=&quot;ni&quot;&gt;&amp;amp;copy;&lt;/span&gt; {{site.title}} 2017&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/footer&amp;gt;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- End of footer --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+ 
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;The page.html contains main-content div and you can set something special for different pages. For example, you can show an h1 title in the page except home page using embeded ruby. Then, include page layout in your HTML files like index.html, blog.html, etc, and &lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;&lt;/code&gt; will render the real content in index.html, blog.html or any other HTML files.&lt;/p&gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
+
+layout: default
+
+---
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;main-content&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;container&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  {% if page.title != 'Home' %}
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;section&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;bg-dark&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text-center&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; 
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt; {{ page.title }} &lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/section&amp;gt;&lt;/span&gt;
+
+  {% endif %}
+  {{ content }}
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+ 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Finally, you can write your blog post! Create your markdown file in the _post folder. To know about kramdown syntax, Click &lt;a href=&quot;https://kramdown.gettalong.org/quickref.html&quot;&gt;here&lt;/a&gt; to get quick start.&lt;/p&gt;
+
+&lt;h2 id=&quot;customized-your-domain-name&quot;&gt;Customized your domain name&lt;/h2&gt;
+
+&lt;p&gt;Github-pages allowed you to customize your domain name, you can get the instruction from &lt;a href=&quot;https://help.github.com/articles/using-a-custom-domain-with-github-pages/&quot;&gt;here&lt;/a&gt;. I used &lt;a href=&quot;https://www.namesilo.com/&quot;&gt;NameSilo&lt;/a&gt;, just because it’s very cheap.&lt;/p&gt;
+
+&lt;p&gt;After you sign up and order your domain name, get into &lt;code class=&quot;highlighter-rouge&quot;&gt;Manage My Domain&lt;/code&gt; to manage the DNS settings. In the DNS template, choose Github and Apply Template. Last but not least, create a file called CNAME in your [github_name].github.io directory. In the CNAME file, you should put your domain name. Take mine as an example, I put www.qiufengzhu.com in the CNAME, which you can find it &lt;a href=&quot;https://github.com/diandians/diandians.github.io/blob/master/CNAME&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Now, your have built your personal sites with jekyll!&lt;/p&gt;
+
+&lt;p&gt;Reference: &lt;a href=&quot;https://learn.cloudcannon.com/jekyll/converting-a-static-site-to-jekyll/&quot;&gt;https://learn.cloudcannon.com/jekyll/converting-a-static-site-to-jekyll&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Introduction</summary></entry></feed>

@@ -116,5 +116,92 @@ The file is *automatically* closed after the block executes
 ```
 ***
 
-Strings
+### Strings
+#### String/Interpolation
 
+1. Single-quote literal strings are very literal
+* Allow escaping of ` with \
+* Show (almost) everything else as is
+
+2. Double-quoted strings
+* Interpret special characters line \n and \t
+* Allow string interpolation!
+
+```ruby
+  single_quoted = 'ice cream \n followed by it\'s a party!'
+  double_quoted = "ice cream \n followed by it\'s a party!"
+
+  puts single_quoted # => ice cream \n followed by it's a party!
+  puts double_quoted # => ice cream
+  
+  def multiply (one, two)
+    "#{one} multiplied by #{two} equals #{one * two}"   ## interpolation(only available for double-quoted strings)
+  end
+  puts multiply(5, 3)
+  # => 5 multiplied by 3 equals 15
+```
+
+#### More Strings
+* String methods ending with ! modify the existing string, most others just return a new string
+* Can also use %Q{long multiline string} (same behavior as double-quoted string)
+
+```ruby
+  my_name = " tim"
+  puts my_name.lstrip.capitalize # => Tim
+  p my_name # => " tim"
+  my_name.lstrip! # (destructive) removes the leading space
+  my_name[0] = 'K' # replace the first character
+  puts my_name # => Kim
+
+  cur_weather = %Q{It's a hot day outside
+                   Grab you umbrellas...}
+
+  cur_weather.lines do |line|
+    line.sub! 'hot', 'rainy' # substitute 'hot' with 'rainy'
+    puts "#{line.strip}"
+  end
+  # => It's a rainy day outside
+  # => Grab your umbrellas...
+```
+* String APIs
+  Go to ```ruby-doc.org``` to get more information about String APIs.
+
+#### Symbols
+
+  * Guaranteed to be *unique* and *immutable* (useful in hash table as key, etc)
+  * Can be converted to a String with to_s; Or from String to SYmbol with to_sym
+
+***
+
+### Arrays
+
+* Collection of object references (auto-expandable)
+* Indexed using [] operator (method)
+* Can be indexed with negative numbers or ranges
+* Heterogeneous types allowed in the same array
+* Can use %w{str1 str2} for string array creation
+
+```ruby
+  her_arr[1, "two", :three] # heterogeneous types
+  puts her_arr[1] # => two (array indices start at 0)
+
+  arr_words = %w{ what a great day today!}
+  puts arr_words[-2] # => day
+  puts "#{arr_words.first} - # {arr_words.last}" # => what - today!
+  p arr_words[-3, 2] # => ["great", "day"] (go back 3 and take 2)
+
+  # (Range type covered later...)
+  p arr_words[2..4] # => ['great', "day", "today"]
+
+  # Make a String out of array elements separated by ','
+  puts arr_words.join(',') # => what, a, great, day, today!
+
+```
+
+* Modifying arrays
+ * Append: push or <<
+ * Remove: pop or shift
+ * Set: [] = (method) 
+
+* Randomly pull elements out with sample
+* Sort or reverse with sort! and reverse!

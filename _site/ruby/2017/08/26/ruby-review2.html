@@ -212,8 +212,113 @@ There are two ways to configure a block in your own method.
 </div>
 <hr />
 
-<p>Strings</p>
+<h3 id="strings">Strings</h3>
+<h4 id="stringinterpolation">String/Interpolation</h4>
 
+<ol>
+  <li>Single-quote literal strings are very literal
+    <ul>
+      <li>Allow escaping of ` with \</li>
+      <li>Show (almost) everything else as is</li>
+    </ul>
+  </li>
+  <li>Double-quoted strings
+    <ul>
+      <li>Interpret special characters line \n and \t</li>
+      <li>Allow string interpolation!</li>
+    </ul>
+  </li>
+</ol>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code>  <span class="n">single_quoted</span> <span class="o">=</span> <span class="s1">'ice cream \n followed by it\'s a party!'</span>
+  <span class="n">double_quoted</span> <span class="o">=</span> <span class="s2">"ice cream </span><span class="se">\n</span><span class="s2"> followed by it</span><span class="se">\'</span><span class="s2">s a party!"</span>
+
+  <span class="nb">puts</span> <span class="n">single_quoted</span> <span class="c1"># =&gt; ice cream \n followed by it's a party!</span>
+  <span class="nb">puts</span> <span class="n">double_quoted</span> <span class="c1"># =&gt; ice cream</span>
+  
+  <span class="k">def</span> <span class="nf">multiply</span> <span class="p">(</span><span class="n">one</span><span class="p">,</span> <span class="n">two</span><span class="p">)</span>
+    <span class="s2">"</span><span class="si">#{</span><span class="n">one</span><span class="si">}</span><span class="s2"> multiplied by </span><span class="si">#{</span><span class="n">two</span><span class="si">}</span><span class="s2"> equals </span><span class="si">#{</span><span class="n">one</span> <span class="o">*</span> <span class="n">two</span><span class="si">}</span><span class="s2">"</span>   <span class="c1">## interpolation(only available for double-quoted strings)</span>
+  <span class="k">end</span>
+  <span class="nb">puts</span> <span class="n">multiply</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+  <span class="c1"># =&gt; 5 multiplied by 3 equals 15</span>
+</code></pre>
+</div>
+
+<h4 id="more-strings">More Strings</h4>
+<ul>
+  <li>String methods ending with ! modify the existing string, most others just return a new string</li>
+  <li>Can also use %Q{long multiline string} (same behavior as double-quoted string)</li>
+</ul>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code>  <span class="n">my_name</span> <span class="o">=</span> <span class="s2">" tim"</span>
+  <span class="nb">puts</span> <span class="n">my_name</span><span class="p">.</span><span class="nf">lstrip</span><span class="p">.</span><span class="nf">capitalize</span> <span class="c1"># =&gt; Tim</span>
+  <span class="nb">p</span> <span class="n">my_name</span> <span class="c1"># =&gt; " tim"</span>
+  <span class="n">my_name</span><span class="p">.</span><span class="nf">lstrip!</span> <span class="c1"># (destructive) removes the leading space</span>
+  <span class="n">my_name</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'K'</span> <span class="c1"># replace the first character</span>
+  <span class="nb">puts</span> <span class="n">my_name</span> <span class="c1"># =&gt; Kim</span>
+
+  <span class="n">cur_weather</span> <span class="o">=</span> <span class="sx">%Q{It's a hot day outside
+                   Grab you umbrellas...}</span>
+
+  <span class="n">cur_weather</span><span class="p">.</span><span class="nf">lines</span> <span class="k">do</span> <span class="o">|</span><span class="n">line</span><span class="o">|</span>
+    <span class="n">line</span><span class="p">.</span><span class="nf">sub!</span> <span class="s1">'hot'</span><span class="p">,</span> <span class="s1">'rainy'</span> <span class="c1"># substitute 'hot' with 'rainy'</span>
+    <span class="nb">puts</span> <span class="s2">"</span><span class="si">#{</span><span class="n">line</span><span class="p">.</span><span class="nf">strip</span><span class="si">}</span><span class="s2">"</span>
+  <span class="k">end</span>
+  <span class="c1"># =&gt; It's a rainy day outside</span>
+  <span class="c1"># =&gt; Grab your umbrellas...</span>
+</code></pre>
+</div>
+<ul>
+  <li>String APIs
+Go to <code class="highlighter-rouge">ruby-doc.org</code> to get more information about String APIs.</li>
+</ul>
+
+<h4 id="symbols">Symbols</h4>
+
+<ul>
+  <li>Guaranteed to be <em>unique</em> and <em>immutable</em> (useful in hash table as key, etc)</li>
+  <li>Can be converted to a String with to_s; Or from String to SYmbol with to_sym</li>
+</ul>
+
+<hr />
+
+<h3 id="arrays">Arrays</h3>
+
+<ul>
+  <li>Collection of object references (auto-expandable)</li>
+  <li>Indexed using [] operator (method)</li>
+  <li>Can be indexed with negative numbers or ranges</li>
+  <li>Heterogeneous types allowed in the same array</li>
+  <li>Can use %w{str1 str2} for string array creation</li>
+</ul>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code>  <span class="n">her_arr</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s2">"two"</span><span class="p">,</span> <span class="ss">:three</span><span class="p">]</span> <span class="c1"># heterogeneous types</span>
+  <span class="nb">puts</span> <span class="n">her_arr</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># =&gt; two (array indices start at 0)</span>
+
+  <span class="n">arr_words</span> <span class="o">=</span> <span class="sx">%w{ what a great day today!}</span>
+  <span class="nb">puts</span> <span class="n">arr_words</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="c1"># =&gt; day</span>
+  <span class="nb">puts</span> <span class="s2">"</span><span class="si">#{</span><span class="n">arr_words</span><span class="p">.</span><span class="nf">first</span><span class="si">}</span><span class="s2"> - # {arr_words.last}"</span> <span class="c1"># =&gt; what - today!</span>
+  <span class="nb">p</span> <span class="n">arr_words</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="c1"># =&gt; ["great", "day"] (go back 3 and take 2)</span>
+
+  <span class="c1"># (Range type covered later...)</span>
+  <span class="nb">p</span> <span class="n">arr_words</span><span class="p">[</span><span class="mi">2</span><span class="p">.</span><span class="nf">.</span><span class="mi">4</span><span class="p">]</span> <span class="c1"># =&gt; ['great', "day", "today"]</span>
+
+  <span class="c1"># Make a String out of array elements separated by ','</span>
+  <span class="nb">puts</span> <span class="n">arr_words</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="s1">','</span><span class="p">)</span> <span class="c1"># =&gt; what, a, great, day, today!</span>
+
+</code></pre>
+</div>
+
+<ul>
+  <li>Modifying arrays</li>
+  <li>Append: push or «</li>
+  <li>Remove: pop or shift</li>
+  <li>
+    <p>Set: [] = (method)</p>
+  </li>
+  <li>Randomly pull elements out with sample</li>
+  <li>Sort or reverse with sort! and reverse!</li>
+</ul>
 
 </div>
 
