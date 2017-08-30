@@ -205,3 +205,43 @@ The file is *automatically* closed after the block executes
 
 * Randomly pull elements out with sample
 * Sort or reverse with sort! and reverse!
+
+```ruby
+#You want a stack (LIFO)? sure
+stack = []; stack << "one"; stack.push("two")
+puts stack.pop() # => two
+
+#You need a queue (FIFO)? we have those too...
+queue = []; queue.push "one"; queue.push "two"
+puts queue.shift # => one
+
+a = [5, 3, 4, 2].sort!.reverse!
+p a   # => [5,4,3,2]  (actually modifies the array)
+p a.sample(2)  # => 2 random elements
+
+a[6] = 33
+p a # => [5,4,3,2,nil,nil,33] 
+```
+
+There are lots of useful Array methods:
+* each - loop through array
+* select - filter array by selecting
+* map - modify each element in the array
+
+```ruby
+a = [1,3,4,7,8,10]
+a.each {|num| puts num} # => 1347810 (no new line)
+puts # => (print new line)
+
+new_arr = a.select {|num| num > 4}
+p new_arr # => [7, 8, 10]
+
+new_arr = a.select {|num| num < 10}
+          .reject {|num| num.even?}
+p new_arr # => [1,3,7]
+
+# Multiply each element by 3 producing new array
+new_arr = a.map {|x| x * 3}
+p new_arr # => [3,9,12,21,24,30]
+```
+Array API is very flexible and powerful. Please refer to the doc to get more information.

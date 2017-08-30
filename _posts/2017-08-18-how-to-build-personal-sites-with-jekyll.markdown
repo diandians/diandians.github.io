@@ -97,7 +97,8 @@ Now, your have built your personal sites with jekyll!
 
 
 
-Reference: [https://learn.cloudcannon.com/jekyll/converting-a-static-site-to-jekyll][refer]
+## Reference
+ [https://learn.cloudcannon.com/jekyll/converting-a-static-site-to-jekyll][refer]
 
 [jekyllrb]:https://jekyllrb.com/
 [Bootstrap]: http://blog.getbootstrap.com/2015/11/24/bootstrap-3-3-6-released/

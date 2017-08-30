@@ -320,6 +320,48 @@ Go to <code class="highlighter-rouge">ruby-doc.org</code> to get more informatio
   <li>Sort or reverse with sort! and reverse!</li>
 </ul>
 
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="c1">#You want a stack (LIFO)? sure</span>
+<span class="n">stack</span> <span class="o">=</span> <span class="p">[];</span> <span class="n">stack</span> <span class="o">&lt;&lt;</span> <span class="s2">"one"</span><span class="p">;</span> <span class="n">stack</span><span class="p">.</span><span class="nf">push</span><span class="p">(</span><span class="s2">"two"</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">stack</span><span class="p">.</span><span class="nf">pop</span><span class="p">()</span> <span class="c1"># =&gt; two</span>
+
+<span class="c1">#You need a queue (FIFO)? we have those too...</span>
+<span class="n">queue</span> <span class="o">=</span> <span class="p">[];</span> <span class="n">queue</span><span class="p">.</span><span class="nf">push</span> <span class="s2">"one"</span><span class="p">;</span> <span class="n">queue</span><span class="p">.</span><span class="nf">push</span> <span class="s2">"two"</span>
+<span class="nb">puts</span> <span class="n">queue</span><span class="p">.</span><span class="nf">shift</span> <span class="c1"># =&gt; one</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">].</span><span class="nf">sort!</span><span class="p">.</span><span class="nf">reverse!</span>
+<span class="nb">p</span> <span class="n">a</span>   <span class="c1"># =&gt; [5,4,3,2]  (actually modifies the array)</span>
+<span class="nb">p</span> <span class="n">a</span><span class="p">.</span><span class="nf">sample</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># =&gt; 2 random elements</span>
+
+<span class="n">a</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="mi">33</span>
+<span class="nb">p</span> <span class="n">a</span> <span class="c1"># =&gt; [5,4,3,2,nil,nil,33] </span>
+</code></pre>
+</div>
+
+<p>There are lots of useful Array methods:</p>
+<ul>
+  <li>each - loop through array</li>
+  <li>select - filter array by selecting</li>
+  <li>map - modify each element in the array</li>
+</ul>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
+<span class="n">a</span><span class="p">.</span><span class="nf">each</span> <span class="p">{</span><span class="o">|</span><span class="n">num</span><span class="o">|</span> <span class="nb">puts</span> <span class="n">num</span><span class="p">}</span> <span class="c1"># =&gt; 1347810 (no new line)</span>
+<span class="nb">puts</span> <span class="c1"># =&gt; (print new line)</span>
+
+<span class="n">new_arr</span> <span class="o">=</span> <span class="n">a</span><span class="p">.</span><span class="nf">select</span> <span class="p">{</span><span class="o">|</span><span class="n">num</span><span class="o">|</span> <span class="n">num</span> <span class="o">&gt;</span> <span class="mi">4</span><span class="p">}</span>
+<span class="nb">p</span> <span class="n">new_arr</span> <span class="c1"># =&gt; [7, 8, 10]</span>
+
+<span class="n">new_arr</span> <span class="o">=</span> <span class="n">a</span><span class="p">.</span><span class="nf">select</span> <span class="p">{</span><span class="o">|</span><span class="n">num</span><span class="o">|</span> <span class="n">num</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">}</span>
+          <span class="p">.</span><span class="nf">reject</span> <span class="p">{</span><span class="o">|</span><span class="n">num</span><span class="o">|</span> <span class="n">num</span><span class="p">.</span><span class="nf">even?</span><span class="p">}</span>
+<span class="nb">p</span> <span class="n">new_arr</span> <span class="c1"># =&gt; [1,3,7]</span>
+
+<span class="c1"># Multiply each element by 3 producing new array</span>
+<span class="n">new_arr</span> <span class="o">=</span> <span class="n">a</span><span class="p">.</span><span class="nf">map</span> <span class="p">{</span><span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">3</span><span class="p">}</span>
+<span class="nb">p</span> <span class="n">new_arr</span> <span class="c1"># =&gt; [3,9,12,21,24,30]</span>
+</code></pre>
+</div>
+<p>Array API is very flexible and powerful. Please refer to the doc to get more information.</p>
+
 </div>
 
   
