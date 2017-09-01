@@ -32,8 +32,8 @@
 <body style="font-size: 16px; color: #544943 !important; background: #ece4d8 !important; margin: 0 auto;">
   <header>
 
-    <nav id="header-nav" class="navbar navbar-default">
-      <div class= "container">
+    <nav id="header-nav" class="navbar navbar-default header-nav-min">
+      <div class= "container" style="width: 75%;">
         <div class="navbar-header">
           <div class="navbar-brand" class="pull-left">
             <a href="{{site.baseurl}}/index.html"><h1> {{site.title}}</h1></a>
@@ -72,10 +72,23 @@
       </div>
 
     </nav> <!-- End of navbar -->
+
+<!--
+    <div class="sidebar">
+      <ul>
+        <li><a href="#"> Home </a></li>
+        <li><a href="#"> Home </a></li>
+      </ul>
+      <button class="sidebarBtn">
+        <span></span>
+      </button>
+    </div>
+    -->
   </header> 
 
 {{content}}  
 
+ <a href="#" class="scrollToTop"> </a>
   <footer class="panel-footer">
     <div class="container">
     <section class="text-center"> 
