@@ -14,11 +14,12 @@ layout: default
 
 	{% endif %}
 
+	{% if page.title != 'Blog' and page.title != 'Home' and page.title != 'Project'%}
 	<div style="text-align: center;">
 		<span style="font-weight: bold"> Date </span> {{ page.date | date: "%d %B %Y" }} |
 		<span style="font-weight: bold"> Category </span>{{ page.categories }}
 	</div>
-
+	{% endif %}
 	{{ content }}
 
 </div>
