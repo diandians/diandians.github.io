@@ -485,7 +485,9 @@ img {
   	h4 {
   		font-size: 4vw;
   	}
-  	
+  	img {
+  		max-width: 230px !important;
+  	}
 
   	#collapsable-nav a { /* Collapsed nav menu text */
     	font-size: 1.2em;
