@@ -3,6 +3,7 @@ layout: page
 title:  "How to build personal sites with Jekyll"
 date:   2017-08-18 
 categories: jekyll
+comments: true
 
 ---
 
@@ -113,3 +114,8 @@ Now, your have built your personal sites with jekyll!
 [namesilo]: https://www.namesilo.com/
 [cname]: https://github.com/diandians/diandians.github.io/blob/master/CNAME
 [refer]: https://learn.cloudcannon.com/jekyll/converting-a-static-site-to-jekyll/
+
+{% if site.disqus.shortname %}
+  {% include disqus_comments.html %}
+{% endif %}
+
