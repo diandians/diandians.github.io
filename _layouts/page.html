@@ -13,6 +13,13 @@ layout: default
 		</section>
 
 	{% endif %}
+
+	<div style="text-align: center;">
+		<span style="font-weight: bold"> Date </span> {{ page.date | date: "%d %B %Y" }} |
+		<span style="font-weight: bold"> Category </span>{{ page.categories }}
+	</div>
+
 	{{ content }}
+
 </div>
 

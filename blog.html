@@ -5,19 +5,19 @@ title: Blog
 
 ---
 
-  
 <section>
-	<div class="container">
-	    <div class="row">
-	        <ul style="list-style-position: inside;">
-	           {% for post in site.posts %}
-	             <li>
-	               <a id="blogs" href="{{ post.url }}">{{ post.title }}</a>
-	               - {{ post.date | date: "%d %B %Y" }}
-	               <span style="border: 1px solid #fff; border-radius: 10%; padding: 1px 2px 1px 2px;"> {{ post.categories}} </span>
-	             </li>
-	           {% endfor %}
-	        </ul>
-	    </div>
+	<div class="row">
+	    <ul style="list-style-position; margin-right: 26px;">
+	        {% for post in site.posts %}
+	            <li>
+		            <a id="blogs" href="{{ post.url }}">{{ post.title }}</a>
+		            <span class="blogs" style="float: right;"> 
+		                <span style="margin-right: 10px;"> {{ post.date | date: "%d %B %Y" }} </span> 
+		            	<span class="label label-default" style="background-color: #8c8a8a;"> {{ post.categories}} </span>
+		            </span>
+	            </li>
+	        {% endfor %}
+	    </ul>
 	</div>
 </section>
+

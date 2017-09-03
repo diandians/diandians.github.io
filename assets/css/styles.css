@@ -463,6 +463,7 @@ img {
 	#main-content {
 		width: 90% !important;
 	}
+
 }
 
 /********** Extra small devices only **********/
@@ -472,10 +473,19 @@ img {
     padding-top: 10px;
     height: 80px;
   	}
-  	.navbar-brand h1 { /* Restaurant name */
-    	padding-top: 10px;
-    	font-size: 5vw; /* 1vw = 1% of viewport width */
+  	h1 {
+  		font-size: 8vw;
   	}
+  	h2 {
+  		font-size: 7vw;
+  	}
+  	h3 {
+  		font-size: 5vw;
+  	}
+  	h4 {
+  		font-size: 4vw;
+  	}
+  	
 
   	#collapsable-nav a { /* Collapsed nav menu text */
     	font-size: 1.2em;
@@ -498,5 +508,8 @@ img {
 	}
 	.navbar-header button.navbar-toggle {
 		margin-right: 20px;
+	}
+	.blogs {
+		display: none;
 	}
 }
