@@ -4,6 +4,8 @@ title:  "Ruby Review - 1"
 date:   2017-08-24 12:00:40 +0800
 categories: ruby
 ---
+* Do not remove this line (it will not be displayed)
+{:toc}
 
 Web stuffs are not diffcult to learn, but they are easy to forget if we do not use them for a long time. To get them back, I would like to write a post to review them. I am going to list some basics and important stuffs in the post. Today's topic is ruby. This topic will last for a few days, so I would like to name it _Ruby Review - 1_. The notes are from a coursera course [Ruby on Rails: An Introduction][ror] from JHU. This is a good course for a beginner as well as those who want to review after a long time.
 

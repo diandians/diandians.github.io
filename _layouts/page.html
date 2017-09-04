@@ -20,13 +20,21 @@ layout: default
 			<span style="font-weight: bold"> Date </span> {{ page.date | date: "%d %B %Y" }} |
 			<span style="font-weight: bold"> Category </span>{{ page.categories }}
 		</div>
+<!--
+		<div class="sidebar">
+	      <ul>
+	        <li><a href="#"> Home </a></li>
+	        <li><a href="#"> Home </a></li>
+	      </ul>
+	      <button class="sidebarBtn">
+	        <span></span>
+	      </button>
+	    </div>
+	    -->
 	{% endif %}
 
 	{{ content }}
 
-	{% comment %}
-	Stuff to hide
-	{% endcomment %}
 </div>
 
 
