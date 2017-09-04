@@ -98,7 +98,8 @@
 			<span style="font-weight: bold"> Date </span> 18 August 2017 |
 			<span style="font-weight: bold"> Category </span>jekyll
 		</div>
-<!--
+
+		<!-- sliding sidebar
 		<div class="sidebar">
 	      <ul>
 	        <li><a href="#"> Home </a></li>
@@ -113,18 +114,18 @@
 
     <div class="row">
       <!-- sidebar, which will move to the top on a small screen -->
-      <div class="col-sm-3">
-        <nav id="toc" data-spy="affix" data-toggle="toc" style="max-width: 230px; margin-left: 0px; margin-top: 0px;"></nav>
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+        <nav id="toc" data-spy="affix" data-toggle="toc" style="margin-left: 0px !important;"></nav>
       </div>
 
-	  <div class="col-sm-9">
+	  <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
         <h2 id="introduction">Introduction</h2>
 
 <p><a href="https://jekyllrb.com/">Jekyll</a> is a very cool static site generator, which is hosted by GitHub. You can host your personal blog or sites on <a href="https://pages.github.com/">GitHub Page</a>. This personal website is built on Jekyll using <a href="http://blog.getbootstrap.com/2015/11/24/bootstrap-3-3-6-released/">Bootstrap v3.3.6</a>. Today, I would like to share my experience how I built this sites. To make it concise, I would skip those front-end stuffs, like HTML, CSS, JavaScipt. I suggest that you have a knowledge of those before building your sites.</p>
 
 <h2 id="set-up">Set up</h2>
 
-<h3 id="prepare-stactic-pages">Prepare stactic pages</h3>
+<h3 id="preparation">Preparation</h3>
 
 <p>The first things you need to do is design your own statics pages. You may have many folders, like css, html, js, and files, like .html and so on.</p>
 
@@ -134,7 +135,7 @@
 
 <p>After finishing installation, validate it on terminal by typing <code class="highlighter-rouge">jekyll -version</code>. You should get the version if you have installed it successfully.</p>
 
-<h2 id="deploy-your-sites-with-jekyll-on-github-pages">Deploy your sites with jekyll on Github Pages</h2>
+<h2 id="deploy">Deploy</h2>
 
 <p>On terminal, type <code class="highlighter-rouge">jekyll new my-sites</code> to get <a href="https://github.com/jekyll/minima">minima</a>, which is the basic jekyll-theme and you can revise it later to customize your sites. Now you have a <code class="highlighter-rouge">my-sites</code> folder in your local directory.</p>
 
@@ -147,7 +148,7 @@
 </div>
 <p>Go to the setting of personal sites’ repo, scroll down and you can see the Github Pages section. Choose master branch as Sourse and save it. Then you can visit your sites via http://[your_github_name].github.io.</p>
 
-<h3 id="convert-your-static-sites-to-jekyll">Convert your static sites to jekyll</h3>
+<h3 id="convert-to-jekyll">Convert to jekyll</h3>
 
 <p>Now you have your personal static pages, like HTML, CSS, etc. You can create a folder called <em>assets</em>. In this folder, you can put CSS in <em>css</em> folder; JavaScript in <em>js</em> folder; Images in <em>images</em>; Fonts in <em>fonts</em> folder. In the _layout folder, place your HTML files. For more information, you can refer <a href="https://jekyllrb.com/docs/structure/">here</a> to see the directory structure of jekyll.</p>
 
@@ -198,7 +199,7 @@ layout: default
 </div>
 <p>Finally, you can write your blog post! Create your markdown file in the _post folder. To know about kramdown syntax, Click <a href="https://kramdown.gettalong.org/quickref.html">here</a> to get quick start.</p>
 
-<h2 id="customized-your-domain-name">Customized your domain name</h2>
+<h2 id="domain-name">Domain Name</h2>
 
 <p>Github-pages allowed you to customize your domain name, you can get the instruction from <a href="https://help.github.com/articles/using-a-custom-domain-with-github-pages/">here</a>. I used <a href="https://www.namesilo.com/">NameSilo</a>, just because it’s very cheap.</p>
 
@@ -214,8 +215,6 @@ layout: default
     </div>
 
   	
-
-	
 
 </div>
 

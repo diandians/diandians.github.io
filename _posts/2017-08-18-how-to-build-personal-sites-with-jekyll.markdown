@@ -14,7 +14,7 @@ comments: true
 
 ## Set up
 
-### Prepare stactic pages
+### Preparation
 
 The first things you need to do is design your own statics pages. You may have many folders, like css, html, js, and files, like .html and so on.
 
@@ -24,7 +24,7 @@ Install Jekyll. If you are Linux/Unix/MacOS, install from [here][jk_install_linu
 
 After finishing installation, validate it on terminal by typing ```jekyll -version```. You should get the version if you have installed it successfully.
 
-## Deploy your sites with jekyll on Github Pages
+## Deploy
 
 On terminal, type ```jekyll new my-sites``` to get [minima][minima], which is the basic jekyll-theme and you can revise it later to customize your sites. Now you have a ```my-sites``` folder in your local directory. 
 
@@ -37,7 +37,7 @@ In your Github, new a repo and name it ```[your_github_name].github.io```. Then,
 ```
 Go to the setting of personal sites' repo, scroll down and you can see the Github Pages section. Choose master branch as Sourse and save it. Then you can visit your sites via http://[your_github_name].github.io.
 
-### Convert your static sites to jekyll
+### Convert to jekyll
 
 Now you have your personal static pages, like HTML, CSS, etc. You can create a folder called *assets*. In this folder, you can put CSS in *css* folder; JavaScript in *js* folder; Images in *images*; Fonts in *fonts* folder. In the _layout folder, place your HTML files. For more information, you can refer [here][jekyll-structure] to see the directory structure of jekyll. 
 
@@ -88,7 +88,7 @@ layout: default
 ```
 Finally, you can write your blog post! Create your markdown file in the _post folder. To know about kramdown syntax, Click [here][quick_refer] to get quick start.
 
-## Customized your domain name
+## Domain Name
 
 Github-pages allowed you to customize your domain name, you can get the instruction from [here][custom_domain]. I used [NameSilo][namesilo], just because it's very cheap. 
 

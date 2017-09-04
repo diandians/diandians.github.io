@@ -20,7 +20,8 @@ layout: default
 			<span style="font-weight: bold"> Date </span> {{ page.date | date: "%d %B %Y" }} |
 			<span style="font-weight: bold"> Category </span>{{ page.categories }}
 		</div>
-<!--
+
+		<!-- sliding sidebar
 		<div class="sidebar">
 	      <ul>
 	        <li><a href="#"> Home </a></li>
@@ -35,11 +36,11 @@ layout: default
 
     <div class="row">
       <!-- sidebar, which will move to the top on a small screen -->
-      <div class="col-sm-3">
-        <nav id="toc" data-spy="affix" data-toggle="toc" style="max-width: 230px; margin-left: 0px; margin-top: 0px;"></nav>
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+        <nav id="toc" data-spy="affix" data-toggle="toc" style="margin-left: 0px !important;"></nav>
       </div>
 
-	  <div class="col-sm-9">
+	  <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
         {{ content }}
       </div>
     </div>
@@ -47,8 +48,6 @@ layout: default
   	{% else %}
 		{{ content }}
 	{% endif %}
-
-	
 
 </div>
 

@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+	$('#toc ul li').css({'padding-left': '5px', 'background': 'none'});
 	$('.sidebarBtn').click(function() {
 		$('.sidebar').toggleClass('active');
 		$('.sidebarBtn').toggleClass('toggle');
@@ -14,8 +15,10 @@ $(document).ready(function() {
 				$('#header-nav').addClass('header-nav-close');
 				$('#header-nav').removeClass('header-nav-min');
 			}
-
-			$('#toc').css({'position': 'fixed', 'top': '15px'}); 
+			if ($(window).width() > 767) {
+				$('#toc').css({'position': 'fixed', 'top': '25px'}); 
+			}
+			
 		} else {
 			$('.scrollToTop').fadeOut();
 			$('.sidebarBtn').fadeOut();
@@ -23,7 +26,10 @@ $(document).ready(function() {
 				$('#header-nav').addClass('header-nav-min');
 				$('#header-nav').removeClass('header-nav-close');
 			}
-			$('#toc').css({'position': 'static', 'top': '0px'}); 
+			if ($(window).width() > 767) {
+				$('#toc').css({'position': 'static', 'top': '0px'});
+			}
+			 
 		}
 	});
 

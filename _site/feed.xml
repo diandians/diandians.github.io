@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-09-04T22:58:10+08:00</updated><id>http://localhost:4000/</id><title type="html">Qiufeng Zhu</title><subtitle>Hi! I am Qiufeng Zhu. Welcome to my sites!
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-09-05T00:57:34+08:00</updated><id>http://localhost:4000/</id><title type="html">Qiufeng Zhu</title><subtitle>Hi! I am Qiufeng Zhu. Welcome to my sites!
 </subtitle><entry><title type="html">Ruby Review - 2</title><link href="http://localhost:4000/ruby/2017/08/26/ruby-review2.html" rel="alternate" type="text/html" title="Ruby Review - 2" /><published>2017-08-26T12:00:40+08:00</published><updated>2017-08-26T12:00:40+08:00</updated><id>http://localhost:4000/ruby/2017/08/26/ruby-review2</id><content type="html" xml:base="http://localhost:4000/ruby/2017/08/26/ruby-review2.html">&lt;p&gt;Fall semaster is coming. Tough life is around the corner. QQ. So later, I may update post less often. Though, I will try my best to write something good.&lt;/p&gt;
 
 &lt;h3 id=&quot;blocks&quot;&gt;Blocks&lt;/h3&gt;
@@ -493,7 +493,7 @@ In Ruby, every function/method has at least one class it belongs to. (not always
 
 &lt;h2 id=&quot;set-up&quot;&gt;Set up&lt;/h2&gt;
 
-&lt;h3 id=&quot;prepare-stactic-pages&quot;&gt;Prepare stactic pages&lt;/h3&gt;
+&lt;h3 id=&quot;preparation&quot;&gt;Preparation&lt;/h3&gt;
 
 &lt;p&gt;The first things you need to do is design your own statics pages. You may have many folders, like css, html, js, and files, like .html and so on.&lt;/p&gt;
 
@@ -503,7 +503,7 @@ In Ruby, every function/method has at least one class it belongs to. (not always
 
 &lt;p&gt;After finishing installation, validate it on terminal by typing &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll -version&lt;/code&gt;. You should get the version if you have installed it successfully.&lt;/p&gt;
 
-&lt;h2 id=&quot;deploy-your-sites-with-jekyll-on-github-pages&quot;&gt;Deploy your sites with jekyll on Github Pages&lt;/h2&gt;
+&lt;h2 id=&quot;deploy&quot;&gt;Deploy&lt;/h2&gt;
 
 &lt;p&gt;On terminal, type &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll new my-sites&lt;/code&gt; to get &lt;a href=&quot;https://github.com/jekyll/minima&quot;&gt;minima&lt;/a&gt;, which is the basic jekyll-theme and you can revise it later to customize your sites. Now you have a &lt;code class=&quot;highlighter-rouge&quot;&gt;my-sites&lt;/code&gt; folder in your local directory.&lt;/p&gt;
 
@@ -516,7 +516,7 @@ In Ruby, every function/method has at least one class it belongs to. (not always
 &lt;/div&gt;
 &lt;p&gt;Go to the setting of personal sites’ repo, scroll down and you can see the Github Pages section. Choose master branch as Sourse and save it. Then you can visit your sites via http://[your_github_name].github.io.&lt;/p&gt;
 
-&lt;h3 id=&quot;convert-your-static-sites-to-jekyll&quot;&gt;Convert your static sites to jekyll&lt;/h3&gt;
+&lt;h3 id=&quot;convert-to-jekyll&quot;&gt;Convert to jekyll&lt;/h3&gt;
 
 &lt;p&gt;Now you have your personal static pages, like HTML, CSS, etc. You can create a folder called &lt;em&gt;assets&lt;/em&gt;. In this folder, you can put CSS in &lt;em&gt;css&lt;/em&gt; folder; JavaScript in &lt;em&gt;js&lt;/em&gt; folder; Images in &lt;em&gt;images&lt;/em&gt;; Fonts in &lt;em&gt;fonts&lt;/em&gt; folder. In the _layout folder, place your HTML files. For more information, you can refer &lt;a href=&quot;https://jekyllrb.com/docs/structure/&quot;&gt;here&lt;/a&gt; to see the directory structure of jekyll.&lt;/p&gt;
 
@@ -567,7 +567,7 @@ layout: default
 &lt;/div&gt;
 &lt;p&gt;Finally, you can write your blog post! Create your markdown file in the _post folder. To know about kramdown syntax, Click &lt;a href=&quot;https://kramdown.gettalong.org/quickref.html&quot;&gt;here&lt;/a&gt; to get quick start.&lt;/p&gt;
 
-&lt;h2 id=&quot;customized-your-domain-name&quot;&gt;Customized your domain name&lt;/h2&gt;
+&lt;h2 id=&quot;domain-name&quot;&gt;Domain Name&lt;/h2&gt;
 
 &lt;p&gt;Github-pages allowed you to customize your domain name, you can get the instruction from &lt;a href=&quot;https://help.github.com/articles/using-a-custom-domain-with-github-pages/&quot;&gt;here&lt;/a&gt;. I used &lt;a href=&quot;https://www.namesilo.com/&quot;&gt;NameSilo&lt;/a&gt;, just because it’s very cheap.&lt;/p&gt;
 
