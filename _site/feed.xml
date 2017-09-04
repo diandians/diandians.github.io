@@ -1,22 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-09-04T13:31:09+08:00</updated><id>http://localhost:4000/</id><title type="html">Qiufeng Zhu</title><subtitle>Hi! I am Qiufeng Zhu. Welcome to my sites!
-</subtitle><entry><title type="html">Ruby Review - 2</title><link href="http://localhost:4000/ruby/2017/08/26/ruby-review2.html" rel="alternate" type="text/html" title="Ruby Review - 2" /><published>2017-08-26T12:00:40+08:00</published><updated>2017-08-26T12:00:40+08:00</updated><id>http://localhost:4000/ruby/2017/08/26/ruby-review2</id><content type="html" xml:base="http://localhost:4000/ruby/2017/08/26/ruby-review2.html">&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#blocks&quot; id=&quot;markdown-toc-blocks&quot;&gt;Blocks&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#files&quot; id=&quot;markdown-toc-files&quot;&gt;Files&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#reading-from-file&quot; id=&quot;markdown-toc-reading-from-file&quot;&gt;Reading from file&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#reading-from-non-existing-file&quot; id=&quot;markdown-toc-reading-from-non-existing-file&quot;&gt;Reading from non existing file&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#writing-to-file&quot; id=&quot;markdown-toc-writing-to-file&quot;&gt;Writing to File&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#strings&quot; id=&quot;markdown-toc-strings&quot;&gt;Strings&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#stringinterpolation&quot; id=&quot;markdown-toc-stringinterpolation&quot;&gt;String/Interpolation&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#more-strings&quot; id=&quot;markdown-toc-more-strings&quot;&gt;More Strings&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#symbols&quot; id=&quot;markdown-toc-symbols&quot;&gt;Symbols&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#arrays&quot; id=&quot;markdown-toc-arrays&quot;&gt;Arrays&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Fall semaster is coming. Tough life is around the corner. QQ. So later, I may update post less often. Though, I will try my best to write something good.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-09-04T22:58:10+08:00</updated><id>http://localhost:4000/</id><title type="html">Qiufeng Zhu</title><subtitle>Hi! I am Qiufeng Zhu. Welcome to my sites!
+</subtitle><entry><title type="html">Ruby Review - 2</title><link href="http://localhost:4000/ruby/2017/08/26/ruby-review2.html" rel="alternate" type="text/html" title="Ruby Review - 2" /><published>2017-08-26T12:00:40+08:00</published><updated>2017-08-26T12:00:40+08:00</updated><id>http://localhost:4000/ruby/2017/08/26/ruby-review2</id><content type="html" xml:base="http://localhost:4000/ruby/2017/08/26/ruby-review2.html">&lt;p&gt;Fall semaster is coming. Tough life is around the corner. QQ. So later, I may update post less often. Though, I will try my best to write something good.&lt;/p&gt;
 
 &lt;h3 id=&quot;blocks&quot;&gt;Blocks&lt;/h3&gt;
 
@@ -293,14 +276,7 @@ Go to &lt;code class=&quot;highlighter-rouge&quot;&gt;ruby-doc.org&lt;/code&gt; 
 &lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;new_arr&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; [3,9,12,21,24,30]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;p&gt;Array API is very flexible and powerful. Please refer to the doc to get more information.&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Ruby Review - 1</title><link href="http://localhost:4000/ruby/2017/08/24/ruby-review1.html" rel="alternate" type="text/html" title="Ruby Review - 1" /><published>2017-08-24T12:00:40+08:00</published><updated>2017-08-24T12:00:40+08:00</updated><id>http://localhost:4000/ruby/2017/08/24/ruby-review1</id><content type="html" xml:base="http://localhost:4000/ruby/2017/08/24/ruby-review1.html">&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#ruby-basics&quot; id=&quot;markdown-toc-ruby-basics&quot;&gt;Ruby basics&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#flow-of-control&quot; id=&quot;markdown-toc-flow-of-control&quot;&gt;Flow of Control&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#functions&quot; id=&quot;markdown-toc-functions&quot;&gt;Functions&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#splat&quot; id=&quot;markdown-toc-splat&quot;&gt;Splat&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Web stuffs are not diffcult to learn, but they are easy to forget if we do not use them for a long time. To get them back, I would like to write a post to review them. I am going to list some basics and important stuffs in the post. Today’s topic is ruby. This topic will last for a few days, so I would like to name it &lt;em&gt;Ruby Review - 1&lt;/em&gt;. The notes are from a coursera course &lt;a href=&quot;https://www.coursera.org/learn/ruby-on-rails-intro&quot;&gt;Ruby on Rails: An Introduction&lt;/a&gt; from JHU. This is a good course for a beginner as well as those who want to review after a long time.&lt;/p&gt;
+&lt;p&gt;Array API is very flexible and powerful. Please refer to the doc to get more information.&lt;/p&gt;</content><author><name></name></author><summary type="html">Fall semaster is coming. Tough life is around the corner. QQ. So later, I may update post less often. Though, I will try my best to write something good.</summary></entry><entry><title type="html">Ruby Review - 1</title><link href="http://localhost:4000/ruby/2017/08/24/ruby-review1.html" rel="alternate" type="text/html" title="Ruby Review - 1" /><published>2017-08-24T12:00:40+08:00</published><updated>2017-08-24T12:00:40+08:00</updated><id>http://localhost:4000/ruby/2017/08/24/ruby-review1</id><content type="html" xml:base="http://localhost:4000/ruby/2017/08/24/ruby-review1.html">&lt;p&gt;Web stuffs are not diffcult to learn, but they are easy to forget if we do not use them for a long time. To get them back, I would like to write a post to review them. I am going to list some basics and important stuffs in the post. Today’s topic is ruby. This topic will last for a few days, so I would like to name it &lt;em&gt;Ruby Review - 1&lt;/em&gt;. The notes are from a coursera course &lt;a href=&quot;https://www.coursera.org/learn/ruby-on-rails-intro&quot;&gt;Ruby on Rails: An Introduction&lt;/a&gt; from JHU. This is a good course for a beginner as well as those who want to review after a long time.&lt;/p&gt;
 
 &lt;h3 id=&quot;ruby-basics&quot;&gt;Ruby basics&lt;/h3&gt;
 &lt;ol&gt;
@@ -511,22 +487,7 @@ In Ruby, every function/method has at least one class it belongs to. (not always
 
   &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;something&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;32&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;more&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; 32&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">How to build personal sites with Jekyll</title><link href="http://localhost:4000/jekyll/2017/08/18/how-to-build-personal-sites-with-jekyll.html" rel="alternate" type="text/html" title="How to build personal sites with Jekyll" /><published>2017-08-18T00:00:00+08:00</published><updated>2017-08-18T00:00:00+08:00</updated><id>http://localhost:4000/jekyll/2017/08/18/how-to-build-personal-sites-with-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/2017/08/18/how-to-build-personal-sites-with-jekyll.html">&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#introduction&quot; id=&quot;markdown-toc-introduction&quot;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#set-up&quot; id=&quot;markdown-toc-set-up&quot;&gt;Set up&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#prepare-stactic-pages&quot; id=&quot;markdown-toc-prepare-stactic-pages&quot;&gt;Prepare stactic pages&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#install-jekyll&quot; id=&quot;markdown-toc-install-jekyll&quot;&gt;Install Jekyll&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#deploy-your-sites-with-jekyll-on-github-pages&quot; id=&quot;markdown-toc-deploy-your-sites-with-jekyll-on-github-pages&quot;&gt;Deploy your sites with jekyll on Github Pages&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#convert-your-static-sites-to-jekyll&quot; id=&quot;markdown-toc-convert-your-static-sites-to-jekyll&quot;&gt;Convert your static sites to jekyll&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#customized-your-domain-name&quot; id=&quot;markdown-toc-customized-your-domain-name&quot;&gt;Customized your domain name&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#reference&quot; id=&quot;markdown-toc-reference&quot;&gt;Reference&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;/div&gt;</content><author><name></name></author><summary type="html">Web stuffs are not diffcult to learn, but they are easy to forget if we do not use them for a long time. To get them back, I would like to write a post to review them. I am going to list some basics and important stuffs in the post. Today’s topic is ruby. This topic will last for a few days, so I would like to name it Ruby Review - 1. The notes are from a coursera course Ruby on Rails: An Introduction from JHU. This is a good course for a beginner as well as those who want to review after a long time.</summary></entry><entry><title type="html">How to build personal sites with Jekyll</title><link href="http://localhost:4000/jekyll/2017/08/18/how-to-build-personal-sites-with-jekyll.html" rel="alternate" type="text/html" title="How to build personal sites with Jekyll" /><published>2017-08-18T00:00:00+08:00</published><updated>2017-08-18T00:00:00+08:00</updated><id>http://localhost:4000/jekyll/2017/08/18/how-to-build-personal-sites-with-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/2017/08/18/how-to-build-personal-sites-with-jekyll.html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; is a very cool static site generator, which is hosted by GitHub. You can host your personal blog or sites on &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Page&lt;/a&gt;. This personal website is built on Jekyll using &lt;a href=&quot;http://blog.getbootstrap.com/2015/11/24/bootstrap-3-3-6-released/&quot;&gt;Bootstrap v3.3.6&lt;/a&gt;. Today, I would like to share my experience how I built this sites. To make it concise, I would skip those front-end stuffs, like HTML, CSS, JavaScipt. I suggest that you have a knowledge of those before building your sites.&lt;/p&gt;
 
@@ -615,4 +576,4 @@ layout: default
 &lt;p&gt;Now, your have built your personal sites with jekyll!&lt;/p&gt;
 
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://learn.cloudcannon.com/jekyll/converting-a-static-site-to-jekyll/&quot;&gt;https://learn.cloudcannon.com/jekyll/converting-a-static-site-to-jekyll&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary></entry></feed>
+&lt;p&gt;&lt;a href=&quot;https://learn.cloudcannon.com/jekyll/converting-a-static-site-to-jekyll/&quot;&gt;https://learn.cloudcannon.com/jekyll/converting-a-static-site-to-jekyll&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Introduction</summary></entry></feed>

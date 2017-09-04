@@ -25,18 +25,21 @@
     <!-- Add icon library -->
     <link rel='stylesheet prefetch' href='https:////netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css'>
 
+    <!-- add after bootstrap.min.css -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v0.4.1/dist/bootstrap-toc.min.css">
+
 
 
   </head>
   
-<body style="font-size: 16px; color: #544943 !important; background: #ece4d8 !important; margin: 0 auto;">
+<body data-spy="scroll" data-target="#toc" style="font-size: 16px; color: #544943 !important; background: #efe8de !important; margin: 0 auto;"> <!--#ece4d8-->
   <header>
 
     <nav id="header-nav" class="navbar navbar-default header-nav-min">
       <div class= "container" style="width: 75%;">
         <div class="navbar-header">
           <div class="navbar-brand" class="pull-left">
-            <a href="/index.html"><h1> Qiufeng Zhu</h1></a>
+            <a href="/index.html"><h1 data-toc-skip> Qiufeng Zhu</h1></a>
           </div>
 
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
@@ -106,9 +109,16 @@
 	      </button>
 	    </div>
 	    -->
-	
 
-	<div id="main-content" class="container">
+
+    <div class="row">
+      <!-- sidebar, which will move to the top on a small screen -->
+      <div class="col-sm-3">
+        <nav id="toc" data-spy="affix" data-toggle="toc" style="max-width: 230px; margin-left: 0px; margin-top: 0px;"></nav>
+      </div>
+
+	  <div class="col-sm-9">
+        <div id="main-content" class="container">
     <div class="row">
     <div id="profile-container" class="col-lg-6 col-md-6 col-sm-6">
       <div class="jumbotron">
@@ -136,6 +146,12 @@
   </div>
 <p><!-- End of main-content --></p>
 
+      </div>
+    </div>
+
+  	
+
+	
 
 </div>
 
@@ -155,6 +171,8 @@
   <!-- jQuery (Bootstrap JS plugins depend on it) -->
   <script src="/assets/js/jquery-2.1.4.min.js"></script>
   <script src="/assets/js/bootstrap.min.js"></script>
+  <!-- add after bootstrap.min.js -->
+  <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v0.4.1/dist/bootstrap-toc.min.js"></script>
   <script src="/assets/js/script.js"></script>
   <script id="dsq-count-scr" src="//qfz.disqus.com/count.js" async></script>
 

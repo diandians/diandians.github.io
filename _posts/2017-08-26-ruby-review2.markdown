@@ -4,8 +4,6 @@ title:  "Ruby Review - 2"
 date:   2017-08-26 12:00:40 +0800
 categories: ruby
 ---
-* Do not remove this line (it will not be displayed)
-{:toc}
 
 Fall semaster is coming. Tough life is around the corner. QQ. So later, I may update post less often. Though, I will try my best to write something good.
 

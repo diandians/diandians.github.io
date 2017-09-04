@@ -180,7 +180,7 @@ img {
 	padding: 60px 30px 30px 30px;
 	background-color: #efe8de;
 	border: 1px solid #f2eade;
-	box-shadow: 0px 1px 3px #3F0C1F;
+	/*box-shadow: 0px 1px 3px #3F0C1F;*/
 }
 .scrollToTop {
 	width: 50px;
@@ -291,6 +291,14 @@ img {
 .sidebarBtn.toggle span:after {
 	top: 0;
 	transform: rotate(-45deg);
+}
+
+nav[data-toggle='toc'] {
+  margin-top: 0px;
+}
+nav[data-toggle='toc'] .nav li a {
+  padding: 4px !important;
+  font-size: 1.1em !important;
 }
 /* SIDEBAR END*/
 /* HOME PAGE */
@@ -514,4 +522,19 @@ img {
 	.blogs {
 		display: none;
 	}
+
+	/* override the Affix plugin so that the navigation isn't sticky */
+  nav.affix[data-toggle='toc'] {
+    position: static;
+  }
+
+  /* PICK ONE */
+  /* don't expand nested items, which pushes down the rest of the page when navigating */
+  nav[data-toggle='toc'] .nav .active .nav {
+    display: none;
+  }
+  /* alternatively, if you *do* want the second-level navigation to be shown (as seen on this page on mobile), use this */
+  nav[data-toggle='toc'] .nav .nav {
+    display: block;
+  }
 }

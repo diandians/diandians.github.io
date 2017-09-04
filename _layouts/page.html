@@ -31,9 +31,24 @@ layout: default
 	      </button>
 	    </div>
 	    -->
+
+
+    <div class="row">
+      <!-- sidebar, which will move to the top on a small screen -->
+      <div class="col-sm-3">
+        <nav id="toc" data-spy="affix" data-toggle="toc" style="max-width: 230px; margin-left: 0px; margin-top: 0px;"></nav>
+      </div>
+
+	  <div class="col-sm-9">
+        {{ content }}
+      </div>
+    </div>
+
+  	{% else %}
+		{{ content }}
 	{% endif %}
 
-	{{ content }}
+	
 
 </div>
 

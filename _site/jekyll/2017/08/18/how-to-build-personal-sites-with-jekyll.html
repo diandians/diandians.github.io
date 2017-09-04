@@ -25,18 +25,21 @@
     <!-- Add icon library -->
     <link rel='stylesheet prefetch' href='https:////netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css'>
 
+    <!-- add after bootstrap.min.css -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v0.4.1/dist/bootstrap-toc.min.css">
+
 
 
   </head>
   
-<body style="font-size: 16px; color: #544943 !important; background: #ece4d8 !important; margin: 0 auto;">
+<body data-spy="scroll" data-target="#toc" style="font-size: 16px; color: #544943 !important; background: #efe8de !important; margin: 0 auto;"> <!--#ece4d8-->
   <header>
 
     <nav id="header-nav" class="navbar navbar-default header-nav-min">
       <div class= "container" style="width: 75%;">
         <div class="navbar-header">
           <div class="navbar-brand" class="pull-left">
-            <a href="/index.html"><h1> Qiufeng Zhu</h1></a>
+            <a href="/index.html"><h1 data-toc-skip> Qiufeng Zhu</h1></a>
           </div>
 
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
@@ -106,24 +109,16 @@
 	      </button>
 	    </div>
 	    -->
-	
 
-	<ul id="markdown-toc">
-  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
-  <li><a href="#set-up" id="markdown-toc-set-up">Set up</a>    <ul>
-      <li><a href="#prepare-stactic-pages" id="markdown-toc-prepare-stactic-pages">Prepare stactic pages</a></li>
-      <li><a href="#install-jekyll" id="markdown-toc-install-jekyll">Install Jekyll</a></li>
-    </ul>
-  </li>
-  <li><a href="#deploy-your-sites-with-jekyll-on-github-pages" id="markdown-toc-deploy-your-sites-with-jekyll-on-github-pages">Deploy your sites with jekyll on Github Pages</a>    <ul>
-      <li><a href="#convert-your-static-sites-to-jekyll" id="markdown-toc-convert-your-static-sites-to-jekyll">Convert your static sites to jekyll</a></li>
-    </ul>
-  </li>
-  <li><a href="#customized-your-domain-name" id="markdown-toc-customized-your-domain-name">Customized your domain name</a></li>
-  <li><a href="#reference" id="markdown-toc-reference">Reference</a></li>
-</ul>
 
-<h2 id="introduction">Introduction</h2>
+    <div class="row">
+      <!-- sidebar, which will move to the top on a small screen -->
+      <div class="col-sm-3">
+        <nav id="toc" data-spy="affix" data-toggle="toc" style="max-width: 230px; margin-left: 0px; margin-top: 0px;"></nav>
+      </div>
+
+	  <div class="col-sm-9">
+        <h2 id="introduction">Introduction</h2>
 
 <p><a href="https://jekyllrb.com/">Jekyll</a> is a very cool static site generator, which is hosted by GitHub. You can host your personal blog or sites on <a href="https://pages.github.com/">GitHub Page</a>. This personal website is built on Jekyll using <a href="http://blog.getbootstrap.com/2015/11/24/bootstrap-3-3-6-released/">Bootstrap v3.3.6</a>. Today, I would like to share my experience how I built this sites. To make it concise, I would skip those front-end stuffs, like HTML, CSS, JavaScipt. I suggest that you have a knowledge of those before building your sites.</p>
 
@@ -215,6 +210,12 @@ layout: default
 <p><a href="https://learn.cloudcannon.com/jekyll/converting-a-static-site-to-jekyll/">https://learn.cloudcannon.com/jekyll/converting-a-static-site-to-jekyll</a></p>
 
 
+      </div>
+    </div>
+
+  	
+
+	
 
 </div>
 
@@ -234,6 +235,8 @@ layout: default
   <!-- jQuery (Bootstrap JS plugins depend on it) -->
   <script src="/assets/js/jquery-2.1.4.min.js"></script>
   <script src="/assets/js/bootstrap.min.js"></script>
+  <!-- add after bootstrap.min.js -->
+  <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v0.4.1/dist/bootstrap-toc.min.js"></script>
   <script src="/assets/js/script.js"></script>
   <script id="dsq-count-scr" src="//qfz.disqus.com/count.js" async></script>
 
