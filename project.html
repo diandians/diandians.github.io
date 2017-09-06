@@ -5,16 +5,12 @@ title: Project
 
 ---
 
-    <div class="row" style="margin-bottom: 20px">
+    <div class="row" style="margin-bottom: 20px;">
+    <h2 style="text-align: center;"> Scalable Website Design & Development: Improving the Web Service Scalability </h2>
       <div class="project col-lg-6 col-md-6 col-sm-12">
-        <h2 style="font-size: 110%;"> Scalable Website Design & Development: Improving the Web Service Scalability </h2>
-        <p>Built and improved a website which collects online coupon and discount information.</p>
-        <ul>
-          <li> Developed the website that has many sections based on Ruby on Rails. </li>
-          <li> Deployed the website on Amazon EC2 and performed load testing using Tsung tool. </li>
-          <li> Optimized the App by adding server-side cache and client-side cache. </li>
-          <li> Achieved good performance with the website able to handle 32 new users per second and around 2,000 users in total under one second. </li>
-        </ul>
+        <p> The website intends to collect online coupons and discounts information, like nike.com, hollister.com and so on. </p>
+        <p> The whole project includes three parts: Building basic functions of the website and make the logic of the website complicated enough; Configuring tsung flows and do load testing; Improving scalability by using several techniques, such as pagination, caching and optimizing code, and continue doing load testing. We create 100k deals, 10k users and 10 administrators in the databases using Faker library. During testing, we deployed the website as well as tsung on Amazon EC2. By using tsung to simulate user flows, we can get lots of statistics of the performace of our website. </p>
+        <p> After many experiments, we get the best solution for the website: using eight m3.large instances as servers, db.m3.large as database, four m3.medium memcached; We also optimize SQL code and add pagination. With this solution, we can handle around 2000 users under one seconde with 0% error rate. </p>
         <a href="https://money-saved.herokuapp.com/" target="_blank"> Link (Now it is deployed on heroku for your reference)</a>
       </div>
       <div class="col-lg-6 col-md-6 col-sm-12">
@@ -23,20 +19,42 @@ title: Project
       </div>
     </div> <!-- End of row -->
     <hr>
+
     <div class="row" style="margin-bottom: 20px">
+        <h2 style="text-align: center;"> User Interface Framework Design </h2>
       <div class="project col-lg-6 col-md-6 col-sm-12">
-        <h2 style="font-size: 110%;"> Dynamic Memory Allocator Design </h2>
-        <ul>
-          <li> Designed a 64 bit dynamic memory allocator that supports malloc, free, realloc, calloc. </li>
-          <li> Implemented malloc function using segregated doubly linked list as data structure, first-fit as searching policy, and optimized it by eliminating footer and using 16 bytes block as minimum block size. </li>
-          <li> Improved average utilization up to 74.3% and achieved high throughput. </li>
-        </ul>
+        <p> This is a project for course 05830 at CMU HCI. </p>
+        <p> The user interface framework is built on Java. I implement Graphical Objects and Group class. Graphical Objects contain outline rectangle, filled rectangle, outline oval, line, icon, text; Group classes include Simple Group, Layout Group which can layout graphical objects vertically or horizontally by some offsets.</p>
+        <p> Then I build a node-edge-editor, where I implement a constraint system based on incremental attribute evaluation algorithm. To make nodes move and draw lines, I implement Behavior Events class, like move behavior, draw behavior and choice behavior. Finally, I developed an editor that has button panel, check-box panel, sliders using my framework. This is a great course that help me understand basics of designing framework. </p>
       </div>
-    </div> <!-- End of row -->
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <img src="assets/images/final-editor.png" class="img-responsive">
+      </div>
+    </div> <!-- End of row -->  
+
     <hr>
     <div class="row" style="margin-bottom: 20px">
-      <div class="project col-lg-6 col-md-6 col-sm-12">
-        <h2 style="font-size: 110%;"> Intelligent Office System </h2>
+      <h2 style="text-align: center;"> Dynamic Memory Allocator Design & Web Proxy</h2>
+      <div class="project col-lg-12 col-md-12 col-sm-12">
+      <p> These two projects are course projects for 15213/15513 at CMU. </p>
+      <h3 style="font-weight: none;"> Dynamic Memory Allocator Design </h3>
+        <ul>
+          <li> Implemented malloc function using C; Adopted segregated doubly linked list as data structure, first-fit as searching policy, and optimized it by eliminating footer and using 16 bytes block as minimum block size. </li>
+          <li> Improved average utilization up to 74.3% and achieved high throughput. </li>
+        </ul>
+      <h3> Web Proxy </h3>
+      <ul>
+          <li> Implemented a proxy program using C that is able to support HTTP and GET method concurrently, and cache the web object using LRU cache.</li>
+      </ul>
+      </div>
+    </div> <!-- End of row -->
+
+
+    <hr>
+    <div class="row" style="margin-bottom: 20px">
+      <div class="project col-lg-12 col-md-12 col-sm-12">
+        <h2 style="text-align: center;"> Intelligent Office System </h2>
+        <p> This is an undergrad project at Nankai University from 2014 to 2015. We got the second prize for <span style="font-style: italic;"> Undergraduate innovation Projects</span>  at Nankai University.</p>
         <ul>
           <li> Built an office system based on ZigBee that could adjust the light intensity, detect people’s working hours and give warnings. (CC2530) </li>
           <li> Applied PWM dimming technology in codes to change light intensity automatically. (C, IAR IDE) </li>

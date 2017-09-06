@@ -50,9 +50,8 @@ h2 {
 }
 h3 {
 	padding: auto 2px 2px 2px;
-	font-weight: bold;
 	margin: 20px 0 10px;
-	font-size: 1.45em;
+	font-size: 1.4em;
 }
 h4 {
 	margin: .6em 0;
@@ -72,7 +71,7 @@ h4 {
  }
 
  p {
- 	font-family: 'Zilla Slab Highlight', cursive
+ 	font-family: 'Zilla Slab Highlight', cursive;
  	text-align: justify;
  }
  ul li {
@@ -298,6 +297,7 @@ nav[data-toggle='toc'] .nav li a {
   padding: 4px !important;
   font-size: 1.1em !important;
 }
+
 /* SIDEBAR END*/
 /* HOME PAGE */
 
