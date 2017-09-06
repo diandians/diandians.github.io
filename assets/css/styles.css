@@ -58,7 +58,7 @@ h4 {
 	font-size: 1.2em;
 	color: #cd596b;
 }
- hr {
+hr {
  	border: none;
 	outline: none;
 	height: 18px;
@@ -71,12 +71,12 @@ h4 {
  }
 
  p {
- 	font-family: 'Zilla Slab Highlight', cursive;
  	text-align: justify;
  }
  ul li {
  	list-style: none;
- 	padding-left: 13px; 	
+ 	padding-left: 13px;
+ 	font-family: 'Zilla Slab Highlight', cursive; 	
  }
  #main-content ul li {
  	background: transparent url(../images/chevron.png) left 6px no-repeat;
@@ -152,8 +152,10 @@ img {
 	color: #e69b95;
   	text-align: center;
 }
-
-#nav-list a:hover, #navelist a:focus {
+.active {
+	background: #ece4d8;
+}
+#nav-list a:hover, #nav-list a:focus {
   background: #ece4d8;
 }
 
@@ -327,7 +329,6 @@ nav[data-toggle='toc'] .nav li a {
 .introduction p {
 	margin: 15px auto 20px;
 	line-weight:.75;
-	text-align: justify;
 }
 /* animation */
 .introduction p {
